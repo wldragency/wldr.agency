@@ -504,3 +504,21 @@ a:hover{ opacity: .92; }
   .steps{ grid-template-columns: 1fr; }
   .bgGrid{ transform: perspective(900px) rotateX(55deg) rotateZ(-10deg) translateY(-160px); }
 }
+/* =========================================
+   PATCH: prevent x-axis scroll + tighten contact hero
+   (add to end of styles.css)
+   ========================================= */
+
+/* Kill any accidental horizontal scroll */
+html, body { overflow-x: hidden; }
+body { max-width: 100%; }
+
+/* Make sure background SVG/grid never creates overflow */
+.hero, .pageHero { overflow: hidden; }
+.hero__bg, .pageHero__bg { overflow: hidden; }
+.flow { display: block; max-width: 100%; }
+
+/* Contact hero spacing: closer to homepage rhythm */
+.pageHero--contact{
+  padding: clamp(3.4rem, 5.5vw, 5.2rem) 0 clamp(2.6rem, 4.2vw, 3.6rem);
+}
