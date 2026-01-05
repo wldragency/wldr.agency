@@ -675,3 +675,85 @@ html, body {
   color: rgba(244,246,251,.72);
   font-weight: 650;
 }
+/* =========================================================
+   CONTACT FORM — DARK / GLASS CONTROLS (scoped, safe)
+   Paste at END of styles.css
+   ========================================================= */
+
+/* Only affect the contact page form area */
+.contactCard .field input,
+.contactCard .field select,
+.contactCard .field textarea{
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(244,246,251,.16);
+  background: rgba(255,255,255,.05);
+  color: rgba(244,246,251,.92);
+  padding: 12px 12px;
+  outline: none;
+
+  /* Kills the default “white box” look in many browsers */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Subtle depth */
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.18);
+}
+
+/* Placeholders */
+.contactCard .field input::placeholder,
+.contactCard .field textarea::placeholder{
+  color: rgba(244,246,251,.48);
+}
+
+/* Focus state */
+.contactCard .field input:focus,
+.contactCard .field select:focus,
+.contactCard .field textarea:focus{
+  border-color: rgba(59,130,246,.60);
+  box-shadow: 0 0 0 6px rgba(59,130,246,.10), inset 0 0 0 1px rgba(0,0,0,.18);
+}
+
+/* Textarea behavior */
+.contactCard .field textarea{
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* SELECT: custom arrow + padding so it looks premium */
+.contactCard .field select{
+  padding-right: 44px; /* room for arrow */
+  cursor: pointer;
+
+  /* Custom arrow (two strokes) */
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(244,246,251,.75) 50%),
+    linear-gradient(135deg, rgba(244,246,251,.75) 50%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(59,130,246,.14), rgba(59,130,246,0) 60%);
+  background-position:
+    calc(100% - 20px) 52%,
+    calc(100% - 14px) 52%,
+    calc(100% - 26px) 50%;
+  background-size:
+    6px 6px,
+    6px 6px,
+    26px 26px;
+  background-repeat: no-repeat;
+}
+
+/* Options dropdown panel (this varies by OS/browser, but helps where supported) */
+.contactCard .field select option{
+  background: #0b0d10;
+  color: rgba(244,246,251,.92);
+}
+
+/* If Chrome still tries to “help” with white autofill */
+.contactCard input:-webkit-autofill,
+.contactCard textarea:-webkit-autofill,
+.contactCard select:-webkit-autofill{
+  -webkit-text-fill-color: rgba(244,246,251,.92);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(12,14,18,.85) inset;
+  box-shadow: 0 0 0px 1000px rgba(12,14,18,.85) inset;
+  border: 1px solid rgba(244,246,251,.16);
+}
