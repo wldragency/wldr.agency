@@ -2,93 +2,203 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact — WLD.R</title>
+  <title>Start a Project — WLD.R</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact WLD.R to start a marketing project." />
-  <link rel="stylesheet" href="/assets/styles.css">
+  <meta name="description" content="Start a project with WLD.R. Tell us what you're building and we'll map the system and ship the assets." />
+  <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 
 <body>
+  <!-- NAV -->
+  <header class="siteHeader">
+    <nav class="nav">
+      <div class="container nav__inner">
+        <a class="nav__logo" href="/" aria-label="WLD.R Home">WLD.R</a>
 
-<nav class="nav">
-  <div class="nav__inner">
-    <a class="nav__logo" href="/">WLD.R</a>
-    <div class="nav__links">
-      <a href="/work.html">Work</a>
-      <a href="/contact.html" class="nav__pill">Start a Project</a>
-    </div>
-  </div>
-</nav>
+        <div class="nav__links">
+          <a class="nav__link" href="/work.html">Work</a>
+          <a class="nav__pill" href="/contact.html" aria-current="page">Start a Project</a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-<header class="section">
-  <div class="container pageHero">
-    <h1 class="pageTitle">Start a Project</h1>
-    <p class="pageIntro">
-      Tell us what you’re building. If it’s a fit, we’ll follow up with next steps.
-    </p>
+  <main>
+    <!-- HERO -->
+    <section class="pageHero pageHero--contact">
+      <div class="pageHero__bg" aria-hidden="true">
+        <div class="bgGrid"></div>
+        <div class="bgGlow"></div>
 
-    <div class="formWrap">
-      <form
-        class="form"
-        action="https://formspree.io/f/mojvzqyp"
-        method="POST"
-      >
-        <div class="formRow">
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-          >
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-          >
+        <svg class="flow flow--band" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
+          <path class="flow__path" d="M-40,160 C220,40 420,240 620,120 C760,40 960,200 1240,80" />
+          <circle class="flow__node" cx="220" cy="100" r="6"/>
+          <circle class="flow__node" cx="620" cy="120" r="7"/>
+          <circle class="flow__node" cx="960" cy="200" r="6"/>
+        </svg>
+      </div>
+
+      <div class="container pageHero__content">
+        <p class="kicker"><span class="dot"></span> START A PROJECT // GET A SYSTEM, NOT RANDOM DELIVERABLES</p>
+        <h1 class="pageHero__title">Start a Project</h1>
+        <p class="pageHero__lead">
+          Tell us what you’re building, what you need to ship, and what “traction” means for you. We’ll map the system and execute.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="section section--tight">
+      <div class="container contactSplit">
+        <div class="contactCard">
+          <h2 class="h2" style="margin-bottom: 10px;">Project Intake</h2>
+          <p class="lead" style="margin-bottom: 18px;">
+            This goes directly to <a href="mailto:support@wldr.agency">support@wldr.agency</a>.
+          </p>
+
+          <form class="form" id="contactForm" action="https://formspree.io/f/mojvzqyp" method="POST">
+            <div class="formRow">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="field">
+                <label for="company">Company / Brand</label>
+                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Brand name" />
+              </div>
+
+              <div class="field">
+                <label for="budget">Budget Range</label>
+                <select id="budget" name="budget">
+                  <option value="" selected>Choose one</option>
+                  <option>$500–$1,500</option>
+                  <option>$1,500–$3,500</option>
+                  <option>$3,500–$7,500</option>
+                  <option>$7,500+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="need">What do you need right now?</label>
+              <select id="need" name="need" required>
+                <option value="" selected>Choose one</option>
+                <option>Brand Strategy + Identity</option>
+                <option>Campaign Creation + Execution</option>
+                <option>Content System (templates + playbook)</option>
+                <option>Not sure — help me map it</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="details">Project details</label>
+              <textarea id="details" name="details" rows="6" placeholder="What are you launching? What’s the goal? What’s not working right now? What does success look like?" required></textarea>
+            </div>
+
+            <div class="field">
+              <label for="timeline">Timeline</label>
+              <input id="timeline" name="timeline" type="text" placeholder="Example: ASAP / 2 weeks / next month" />
+            </div>
+
+            <!-- Optional Formspree fields -->
+            <input type="hidden" name="_subject" value="New WLD.R Project Inquiry" />
+
+            <div class="formActions">
+              <button class="btn btn--primary" type="submit">Send</button>
+              <a class="btn btn--ghost" href="mailto:support@wldr.agency">Email Instead</a>
+            </div>
+
+            <p class="formNote">
+              By submitting, you agree WLD.R can contact you about this inquiry. No spam. No nonsense.
+            </p>
+
+            <div class="formSuccess" id="formSuccess" role="status" aria-live="polite" hidden>
+              <div class="formSuccess__title">Message sent.</div>
+              <div class="formSuccess__desc">We’ll reply from <a href="mailto:support@wldr.agency">support@wldr.agency</a>.</div>
+            </div>
+
+            <div class="formError" id="formError" role="alert" hidden>
+              Something went wrong sending your message. You can email us directly at
+              <a href="mailto:support@wldr.agency">support@wldr.agency</a>.
+            </div>
+          </form>
         </div>
 
-        <select name="interest" required>
-          <option value="" disabled selected>
-            What do you need?
-          </option>
-          <option>Brand identity / positioning</option>
-          <option>Campaign creation + execution</option>
-          <option>Content system + creative direction</option>
-          <option>Other</option>
-        </select>
+        <aside class="contactAside">
+          <div class="infoCard">
+            <div class="infoCard__title">What happens next</div>
+            <ul class="infoList">
+              <li><span>01</span> Quick reply + a few clarifying questions</li>
+              <li><span>02</span> We map the system (not just deliverables)</li>
+              <li><span>03</span> We execute and ship what works</li>
+            </ul>
+          </div>
 
-        <textarea
-          name="message"
-          placeholder="Give us the quick version: goals, timeline, and what success looks like."
-          required
-        ></textarea>
+          <div class="infoCard">
+            <div class="infoCard__title">Prefer email?</div>
+            <p class="copy">
+              Send your goals + timeline and we’ll take it from there.
+            </p>
+            <div style="margin-top: 14px;">
+              <a class="btn btn--primary" href="mailto:support@wldr.agency">support@wldr.agency</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
 
-        <!-- Optional: helps you see submissions inside Formspree -->
-        <input type="hidden" name="_subject" value="New WLD.R Project Inquiry">
-
-        <button type="submit" class="cta">Send</button>
-      </form>
-
-      <p class="small" style="margin-top: 18px;">
-        Prefer email?
-        <a
-          href="mailto:support@wldr.agency"
-          style="text-decoration: underline;"
-        >
-          support@wldr.agency
-        </a>
-      </p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">© <span id="year"></span> WLD.R</div>
+      <div class="footer__right">
+        <a href="mailto:support@wldr.agency">support@wldr.agency</a>
+      </div>
     </div>
-  </div>
-</header>
+  </footer>
 
-<footer class="footer">
-  <div class="footerInner">
-    <div>© WLD.R</div>
-    <div class="muted">support@wldr.agency</div>
-  </div>
-</footer>
+  <script>
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
+    // AJAX submit (keeps user on page + shows success message)
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    const errorBox = document.getElementById('formError');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      success.hidden = true;
+      errorBox.hidden = true;
+
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.reset();
+          success.hidden = false;
+        } else {
+          errorBox.hidden = false;
+        }
+      } catch (err) {
+        errorBox.hidden = false;
+      }
+    });
+  </script>
 </body>
 </html>
