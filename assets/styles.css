@@ -522,3 +522,70 @@ body { max-width: 100%; }
 .pageHero--contact{
   padding: clamp(3.4rem, 5.5vw, 5.2rem) 0 clamp(2.6rem, 4.2vw, 3.6rem);
 }
+/* ===============================
+   CONTACT PAGE ISOLATION FIX
+   =============================== */
+
+/* Prevent horizontal scroll globally */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Contact page hero ONLY */
+.pageHero--contact {
+  position: relative;
+  padding: clamp(4rem, 7vw, 6rem) 0;
+  overflow: hidden;
+}
+
+/* Ensure hero background stays contained */
+.pageHero--contact .pageHero__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Kill inherited hero spacing rules */
+.pageHero--contact .pageHero__content > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Contain SVG flows so they don’t create X scroll */
+.pageHero--contact svg.flow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* CONTACT LAYOUT */
+.contactSplit {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Form card containment */
+.contactCard {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sidebar containment */
+.contactAside {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mobile fix */
+@media (max-width: 980px) {
+  .contactSplit {
+    grid-template-columns: 1fr;
+  }
+}
