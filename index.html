@@ -39,7 +39,7 @@
     </p>
 
     <div class="hero__actions">
-      <a href="/contact.html" class="cta">Start a Project</a>
+      <a href="/contact.html" class="cta cta--accent">Start a Project</a>
       <a href="/work.html" class="cta secondary">See Work</a>
     </div>
 
@@ -60,31 +60,109 @@
   </div>
 </header>
 
+<!-- Graphic divider -->
+<section class="divider">
+  <div class="divider__glow" aria-hidden="true"></div>
+  <div class="divider__inner container">
+    <div class="divider__line"></div>
+    <div class="divider__chips">
+      <span class="chip">Strategy</span>
+      <span class="chip">Creative</span>
+      <span class="chip">Execution</span>
+      <span class="chip">Traction</span>
+    </div>
+  </div>
+</section>
+
 <section class="section dark">
   <div class="container">
-    <h2 class="sectionTitle">What We Do</h2>
-    <p class="sectionIntro">
-      We build connected marketing ecosystems—so every asset works together and drives the same outcome:
-      traction. You’ll never leave with “a logo” or “some posts.” You leave with a system.
-    </p>
+    <div class="sectionHeader">
+      <h2 class="sectionTitle">What We Do</h2>
+      <p class="sectionIntro">
+        We build connected marketing ecosystems—so every asset works together and drives the same outcome: traction.
+        You’ll never leave with “a logo” or “some posts.” You leave with a system.
+      </p>
+    </div>
 
-    <div class="listGrid">
-      <div class="listItem">
-        <div class="listTitle">Brand Strategy & Identity</div>
-        <div class="listDesc">Positioning, voice, identity systems, and brand rules people can actually follow.</div>
-      </div>
-      <div class="listItem">
-        <div class="listTitle">Campaign Creation & Execution</div>
-        <div class="listDesc">Concept → creative direction → launch assets that convert attention into action.</div>
-      </div>
-      <div class="listItem">
-        <div class="listTitle">Content Systems</div>
-        <div class="listDesc">Templates, playbooks, and repeatable output—built for momentum, not burnout.</div>
-      </div>
+    <div class="serviceGrid">
+      <article class="serviceCard">
+        <div class="serviceTop">
+          <div class="serviceIcon" aria-hidden="true">
+            <!-- Target / positioning icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 21a9 9 0 1 0-9-9" stroke="currentColor" stroke-width="1.6" opacity="0.9"/>
+              <path d="M12 17a5 5 0 1 0-5-5" stroke="currentColor" stroke-width="1.6" opacity="0.9"/>
+              <path d="M12 13a1 1 0 1 0-1-1" stroke="currentColor" stroke-width="1.6" opacity="0.9"/>
+              <path d="M3 12h5" stroke="currentColor" stroke-width="1.6" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="serviceMeta">
+            <div class="serviceTag">Brand Strategy</div>
+            <h3 class="serviceTitle">Clarity, Identity, Direction</h3>
+          </div>
+        </div>
+        <p class="serviceDesc">
+          Positioning, voice, and identity systems built for real-world use—so your brand stays consistent without constant oversight.
+        </p>
+        <ul class="serviceList">
+          <li>Positioning + messaging framework</li>
+          <li>Visual identity + brand rules</li>
+          <li>Creative direction + templates</li>
+        </ul>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceTop">
+          <div class="serviceIcon" aria-hidden="true">
+            <!-- Bolt / execution icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M13 2 3 14h8l-1 8 11-14h-8l0-6Z" stroke="currentColor" stroke-width="1.6" opacity="0.9"/>
+            </svg>
+          </div>
+          <div class="serviceMeta">
+            <div class="serviceTag">Campaign Execution</div>
+            <h3 class="serviceTitle">Concept → Launch Assets</h3>
+          </div>
+        </div>
+        <p class="serviceDesc">
+          Campaigns designed to convert attention into action—built fast, aligned, and ready to deploy across channels.
+        </p>
+        <ul class="serviceList">
+          <li>Campaign concept + creative direction</li>
+          <li>Launch assets + content packages</li>
+          <li>Landing/offer structure guidance</li>
+        </ul>
+      </article>
+
+      <article class="serviceCard">
+        <div class="serviceTop">
+          <div class="serviceIcon" aria-hidden="true">
+            <!-- Loop / repeatability icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M20 6v6h-6" stroke="currentColor" stroke-width="1.6" opacity="0.9"/>
+              <path d="M4 18v-6h6" stroke="currentColor" stroke-width="1.6" opacity="0.9"/>
+              <path d="M20 12a8 8 0 0 0-13.66-5.66L4 8" stroke="currentColor" stroke-width="1.6" opacity="0.65"/>
+              <path d="M4 12a8 8 0 0 0 13.66 5.66L20 16" stroke="currentColor" stroke-width="1.6" opacity="0.65"/>
+            </svg>
+          </div>
+          <div class="serviceMeta">
+            <div class="serviceTag">Content Systems</div>
+            <h3 class="serviceTitle">Repeatable Output</h3>
+          </div>
+        </div>
+        <p class="serviceDesc">
+          Systems that make consistency easy—so content stays on-brand and sustainable without burnout.
+        </p>
+        <ul class="serviceList">
+          <li>Content pillars + formats</li>
+          <li>Templates + posting system</li>
+          <li>Creative playbooks</li>
+        </ul>
+      </article>
     </div>
 
     <div class="sectionCtas">
-      <a href="/contact.html" class="cta">Start a Project</a>
+      <a href="/contact.html" class="cta cta--accent">Start a Project</a>
       <a href="/work.html" class="cta secondary">See Work</a>
     </div>
   </div>
@@ -92,11 +170,13 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="sectionTitle">How We Work</h2>
-    <p class="sectionIntro">
-      Strategy first. Creative second. Execution always. We don’t pitch endless concepts.
-      We build what works—then we make it repeatable.
-    </p>
+    <div class="sectionHeader">
+      <h2 class="sectionTitle">How We Work</h2>
+      <p class="sectionIntro">
+        Strategy first. Creative second. Execution always. We don’t pitch endless concepts.
+        We build what works—then we make it repeatable.
+      </p>
+    </div>
 
     <div class="processGrid">
       <div class="processStep">
@@ -117,7 +197,7 @@
     </div>
 
     <div class="sectionCtas">
-      <a href="/contact.html" class="cta">Let’s Build Traction</a>
+      <a href="/contact.html" class="cta cta--accent">Let’s Build Traction</a>
     </div>
   </div>
 </section>
