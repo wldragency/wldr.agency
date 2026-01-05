@@ -5,7 +5,7 @@
   <title>Start a Project — WLD.R</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Start a project with WLD.R. Tell us what you're building and we'll map the system and ship the assets." />
-  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
@@ -16,21 +16,20 @@
         <a class="nav__logo" href="/" aria-label="WLD.R Home">WLD.R</a>
 
         <div class="nav__links">
-          <a class="nav__link" href="/work.html">Work</a>
-          <a class="nav__pill" href="/contact.html" aria-current="page">Start a Project</a>
+          <a class="nav__link" href="work.html">Work</a>
+          <a class="nav__pill" href="contact.html" aria-current="page">Start a Project</a>
         </div>
       </div>
     </nav>
   </header>
 
   <main>
-    <!-- PAGE HERO (matches site hero vibe, but tighter) -->
+    <!-- HERO -->
     <section class="pageHero pageHero--contact">
       <div class="pageHero__bg" aria-hidden="true">
         <div class="bgGrid"></div>
         <div class="bgGlow"></div>
 
-        <!-- Contained flow line -->
         <svg class="flow flow--band" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
           <path class="flow__path" d="M-40,160 C220,40 420,240 620,120 C760,40 960,200 1240,80" />
           <circle class="flow__node" cx="220" cy="100" r="6"/>
@@ -101,9 +100,7 @@
 
             <div class="field">
               <label for="details">Project details</label>
-              <textarea id="details" name="details" rows="6"
-                placeholder="What are you launching? What’s the goal? What’s not working right now? What does success look like?"
-                required></textarea>
+              <textarea id="details" name="details" rows="6" placeholder="What are you launching? What’s the goal? What’s not working right now? What does success look like?" required></textarea>
             </div>
 
             <div class="field">
@@ -146,7 +143,9 @@
 
           <div class="infoCard">
             <div class="infoCard__title">Prefer email?</div>
-            <p class="copy">Send your goals + timeline and we’ll take it from there.</p>
+            <p class="copy">
+              Send your goals + timeline and we’ll take it from there.
+            </p>
             <div style="margin-top: 14px;">
               <a class="btn btn--primary" href="mailto:support@wldr.agency">support@wldr.agency</a>
             </div>
@@ -169,7 +168,6 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // AJAX submit (keeps user on page + shows success message)
     const form = document.getElementById('contactForm');
     const success = document.getElementById('formSuccess');
     const errorBox = document.getElementById('formError');
