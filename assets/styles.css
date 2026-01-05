@@ -485,3 +485,16 @@ input:focus, select:focus, textarea:focus{
   .bgGrid{ transform: perspective(900px) rotateX(55deg) rotateZ(-10deg) translateY(-160px); }
   .pageHero .flow--band{ bottom: -90px; height: 260px; opacity: .75; }
 }
+/* Force contact form to inherit the site dark UI */
+.pageHero--contact + .section .contactCard input,
+.pageHero--contact + .section .contactCard select,
+.pageHero--contact + .section .contactCard textarea{
+  background: rgba(255,255,255,.02) !important;
+  color: rgba(244,246,251,.9) !important;
+  border: 1px solid rgba(244,246,251,.14) !important;
+}
+
+.pageHero--contact + .section .contactCard input::placeholder,
+.pageHero--contact + .section .contactCard textarea::placeholder{
+  color: rgba(244,246,251,.45) !important;
+}
