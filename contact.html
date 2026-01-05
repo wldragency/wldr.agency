@@ -24,32 +24,60 @@
   <div class="container pageHero">
     <h1 class="pageTitle">Start a Project</h1>
     <p class="pageIntro">
-      Tell us what you’re building. If it’s a fit, we’ll respond with next steps.
+      Tell us what you’re building. If it’s a fit, we’ll follow up with next steps.
     </p>
 
     <div class="formWrap">
-      <!-- Formspree-ready: replace the action URL once you create the form -->
-      <form class="form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+      <form
+        class="form"
+        action="https://formspree.io/f/mojvzqyp"
+        method="POST"
+      >
         <div class="formRow">
-          <input type="text" name="name" placeholder="Name" required>
-          <input type="email" name="email" placeholder="Email" required>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+          >
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          >
         </div>
 
         <select name="interest" required>
-          <option value="" disabled selected>What do you need?</option>
+          <option value="" disabled selected>
+            What do you need?
+          </option>
           <option>Brand identity / positioning</option>
           <option>Campaign creation + execution</option>
           <option>Content system + creative direction</option>
           <option>Other</option>
         </select>
 
-        <textarea name="message" placeholder="Give us the quick version: goals, timeline, and what success looks like." required></textarea>
+        <textarea
+          name="message"
+          placeholder="Give us the quick version: goals, timeline, and what success looks like."
+          required
+        ></textarea>
+
+        <!-- Optional: helps you see submissions inside Formspree -->
+        <input type="hidden" name="_subject" value="New WLD.R Project Inquiry">
 
         <button type="submit" class="cta">Send</button>
       </form>
 
       <p class="small" style="margin-top: 18px;">
-        Prefer email? <a href="mailto:support@wldr.agency" style="text-decoration: underline;">support@wldr.agency</a>
+        Prefer email?
+        <a
+          href="mailto:support@wldr.agency"
+          style="text-decoration: underline;"
+        >
+          support@wldr.agency
+        </a>
       </p>
     </div>
   </div>
