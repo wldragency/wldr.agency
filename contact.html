@@ -24,13 +24,13 @@
   </header>
 
   <main>
-    <!-- HERO (aligned with homepage hero language) -->
+    <!-- PAGE HERO (matches site hero vibe, but tighter) -->
     <section class="pageHero pageHero--contact">
       <div class="pageHero__bg" aria-hidden="true">
         <div class="bgGrid"></div>
         <div class="bgGlow"></div>
 
-        <!-- Constrained "system" band (no giant takeover shapes) -->
+        <!-- Contained flow line -->
         <svg class="flow flow--band" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
           <path class="flow__path" d="M-40,160 C220,40 420,240 620,120 C760,40 960,200 1240,80" />
           <circle class="flow__node" cx="220" cy="100" r="6"/>
@@ -41,22 +41,10 @@
 
       <div class="container pageHero__content">
         <p class="kicker"><span class="dot"></span> START A PROJECT // GET A SYSTEM, NOT RANDOM DELIVERABLES</p>
-
-        <h1 class="pageHero__title">
-          Build traction with a system.
-          <span class="pageHero__accent">Not a pile of assets.</span>
-        </h1>
-
+        <h1 class="pageHero__title">Start a Project</h1>
         <p class="pageHero__lead">
-          Tell us what you’re building, what you need to ship, and what “traction” means for you.
-          We’ll map the system and execute.
+          Tell us what you’re building, what you need to ship, and what “traction” means for you. We’ll map the system and execute.
         </p>
-
-        <div class="pageHero__meta">
-          <div class="metaPill"><span class="metaDot"></span> Strategy → Execution</div>
-          <div class="metaPill"><span class="metaDot"></span> Clear scope. Fast ship.</div>
-          <div class="metaPill"><span class="metaDot"></span> No fluff. Just traction.</div>
-        </div>
       </div>
     </section>
 
@@ -64,12 +52,10 @@
     <section class="section section--tight">
       <div class="container contactSplit">
         <div class="contactCard">
-          <div class="cardTop">
-            <h2 class="h2">Project Intake</h2>
-            <p class="lead">
-              This goes directly to <a class="link" href="mailto:support@wldr.agency">support@wldr.agency</a>.
-            </p>
-          </div>
+          <h2 class="h2" style="margin-bottom: 10px;">Project Intake</h2>
+          <p class="lead" style="margin-bottom: 18px;">
+            This goes directly to <a href="mailto:support@wldr.agency">support@wldr.agency</a>.
+          </p>
 
           <form class="form" id="contactForm" action="https://formspree.io/f/mojvzqyp" method="POST">
             <div class="formRow">
@@ -115,7 +101,9 @@
 
             <div class="field">
               <label for="details">Project details</label>
-              <textarea id="details" name="details" rows="6" placeholder="What are you launching? What’s the goal? What’s not working right now? What does success look like?" required></textarea>
+              <textarea id="details" name="details" rows="6"
+                placeholder="What are you launching? What’s the goal? What’s not working right now? What does success look like?"
+                required></textarea>
             </div>
 
             <div class="field">
@@ -123,7 +111,6 @@
               <input id="timeline" name="timeline" type="text" placeholder="Example: ASAP / 2 weeks / next month" />
             </div>
 
-            <!-- Optional Formspree fields -->
             <input type="hidden" name="_subject" value="New WLD.R Project Inquiry" />
 
             <div class="formActions">
@@ -137,12 +124,12 @@
 
             <div class="formSuccess" id="formSuccess" role="status" aria-live="polite" hidden>
               <div class="formSuccess__title">Message sent.</div>
-              <div class="formSuccess__desc">We’ll reply from <a class="link" href="mailto:support@wldr.agency">support@wldr.agency</a>.</div>
+              <div class="formSuccess__desc">We’ll reply from <a href="mailto:support@wldr.agency">support@wldr.agency</a>.</div>
             </div>
 
             <div class="formError" id="formError" role="alert" hidden>
               Something went wrong sending your message. You can email us directly at
-              <a class="link" href="mailto:support@wldr.agency">support@wldr.agency</a>.
+              <a href="mailto:support@wldr.agency">support@wldr.agency</a>.
             </div>
           </form>
         </div>
@@ -159,10 +146,8 @@
 
           <div class="infoCard">
             <div class="infoCard__title">Prefer email?</div>
-            <p class="copy">
-              Send your goals + timeline and we’ll take it from there.
-            </p>
-            <div class="infoCard__cta">
+            <p class="copy">Send your goals + timeline and we’ll take it from there.</p>
+            <div style="margin-top: 14px;">
               <a class="btn btn--primary" href="mailto:support@wldr.agency">support@wldr.agency</a>
             </div>
           </div>
@@ -176,13 +161,12 @@
     <div class="container footer__inner">
       <div class="footer__left">© <span id="year"></span> WLD.R</div>
       <div class="footer__right">
-        <a class="link" href="mailto:support@wldr.agency">support@wldr.agency</a>
+        <a href="mailto:support@wldr.agency">support@wldr.agency</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // AJAX submit (keeps user on page + shows success message)
