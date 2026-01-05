@@ -4,27 +4,63 @@
   <meta charset="UTF-8" />
   <title>Contact — WLD.R</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact WLD.R to start a marketing project." />
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
+
 <body>
 
-<section class="section">
-  <div class="container">
-    <h1>Start a Project</h1>
-    <p class="muted">Tell us about your brand and what you’re building.</p>
-
-    <form action="https://formspree.io/f/XXXXXX" method="POST" class="form">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Project details" rows="6" required></textarea>
-      <button type="submit" class="cta">Send</button>
-    </form>
-
-    <p class="muted small">
-      Prefer email? <a href="mailto:hello@wldr.agency">hello@wldr.agency</a>
-    </p>
+<nav class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="/">WLD.R</a>
+    <div class="nav__links">
+      <a href="/work.html">Work</a>
+      <a href="/contact.html" class="nav__pill">Start a Project</a>
+    </div>
   </div>
-</section>
+</nav>
+
+<header class="section">
+  <div class="container pageHero">
+    <h1 class="pageTitle">Start a Project</h1>
+    <p class="pageIntro">
+      Tell us what you’re building. If it’s a fit, we’ll respond with next steps.
+    </p>
+
+    <div class="formWrap">
+      <!-- Formspree-ready: replace the action URL once you create the form -->
+      <form class="form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+        <div class="formRow">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+
+        <select name="interest" required>
+          <option value="" disabled selected>What do you need?</option>
+          <option>Brand identity / positioning</option>
+          <option>Campaign creation + execution</option>
+          <option>Content system + creative direction</option>
+          <option>Other</option>
+        </select>
+
+        <textarea name="message" placeholder="Give us the quick version: goals, timeline, and what success looks like." required></textarea>
+
+        <button type="submit" class="cta">Send</button>
+      </form>
+
+      <p class="small" style="margin-top: 18px;">
+        Prefer email? <a href="mailto:support@wldr.agency" style="text-decoration: underline;">support@wldr.agency</a>
+      </p>
+    </div>
+  </div>
+</header>
+
+<footer class="footer">
+  <div class="footerInner">
+    <div>© WLD.R</div>
+    <div class="muted">support@wldr.agency</div>
+  </div>
+</footer>
 
 </body>
 </html>
