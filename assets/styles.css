@@ -1,1095 +1,219 @@
-/* =========================
-   WLD.R — System Site Styles
-   ========================= */
-
-:root{
-  --bg: #070809;
-  --text: #f4f6fb;
-  --muted: rgba(244,246,251,.72);
-  --stroke: rgba(244,246,251,.14);
-
-  --accent: #3b82f6;
-
-  --shadow: 0 20px 50px rgba(0,0,0,.55);
-  --radius: 18px;
-  --radius2: 24px;
-
-  --container: 1160px;
-}
-
-/* ---- HARD FIXES FOR YOUR ISSUE ---- */
-html, body { height: 100%; }
-html { overflow-x: hidden; }          /* prevents x-axis scrollbar */
-body { overflow-x: hidden; }          /* prevents SVG overflow from creating scroll */
-svg { max-width: 100%; display: block; }
-*{ box-sizing: border-box; }
-
-body{
-  margin: 0;
-  background:
-    radial-gradient(1200px 800px at 20% 0%, rgba(59,130,246,.12), transparent 55%),
-    radial-gradient(900px 700px at 85% 10%, rgba(59,130,246,.08), transparent 60%),
-    var(--bg);
-  color: var(--text);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.55;
-}
-
-a{ color: inherit; text-decoration: none; }
-a:hover{ opacity: .92; }
-
-.container{
-  width: min(var(--container), calc(100% - 48px));
-  margin: 0 auto;
-}
-
-.h2{
-  margin: 0 0 12px 0;
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  letter-spacing: -0.02em;
-}
-.h3{
-  margin: 0 0 6px 0;
-  font-size: 1.25rem;
-  letter-spacing: -0.01em;
-}
-.lead{
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.05rem;
-  max-width: 70ch;
-}
-.copy{ margin: 0; color: var(--muted); }
-.copy--muted{ color: rgba(244,246,251,.62); }
-
-/* =========================
-   NAV
-   ========================= */
-.siteHeader{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: linear-gradient(to bottom, rgba(7,8,9,.72), rgba(7,8,9,.25));
-  backdrop-filter: blur(10px);
-}
-.nav{ border-bottom: 1px solid rgba(244,246,251,.06); }
-.nav__inner{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  padding: 18px 0;
-}
-.nav__logo{
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-size: .95rem;
-}
-.nav__links{ display:flex; gap: 18px; align-items:center; }
-.nav__link{ color: rgba(244,246,251,.78); font-size: .95rem; }
-.nav__pill{
-  padding: 10px 14px;
-  border: 1px solid rgba(244,246,251,.18);
-  border-radius: 999px;
-  background: rgba(244,246,251,.04);
-  box-shadow: 0 10px 25px rgba(0,0,0,.25);
-}
-
-/* =========================
-   BUTTONS
-   ========================= */
-.actions{
-  display:flex;
-  gap: 12px;
-  align-items:center;
-  margin-top: 22px;
-  flex-wrap: wrap;
-}
-.actions--inline{ margin-top: 18px; }
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 12px 16px;
-  border-radius: 12px;
-  border: 1px solid rgba(244,246,251,.18);
-  background: rgba(244,246,251,.04);
-  color: var(--text);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  transition: transform .12s ease, background .12s ease, border-color .12s ease;
-}
-.btn:hover{ transform: translateY(-1px); }
-.btn--primary{
-  border-color: rgba(59,130,246,.55);
-  background: linear-gradient(180deg, rgba(59,130,246,.18), rgba(59,130,246,.06));
-}
-.btn--ghost{ background: rgba(244,246,251,.03); }
-
-/* =========================
-   BACKGROUND ELEMENTS
-   ========================= */
-.bgGrid{
-  position:absolute;
-  inset: -40px;
-  background-image:
-    linear-gradient(to right, rgba(244,246,251,.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(244,246,251,.06) 1px, transparent 1px);
-  background-size: 70px 70px;
-  opacity: .07;
-  transform: perspective(900px) rotateX(55deg) rotateZ(-10deg) translateY(-120px);
-  transform-origin: top;
-}
-
-.bgGlow{
-  position:absolute;
-  width: 900px;
-  height: 900px;
-  left: -220px;
-  top: -280px;
-  background: radial-gradient(circle at 40% 40%, rgba(59,130,246,.22), transparent 55%);
-  filter: blur(12px);
-  opacity: .85;
-}
-
-/* =========================
-   HERO (FIXED RHYTHM)
-   ========================= */
-.hero{
-  position: relative;
-  min-height: auto; /* was 90vh; this contributes to huge gaps on some screens */
-  display:flex;
-  align-items: center;
-  padding: clamp(3.8rem, 6vw, 6rem) 0; /* slightly tighter */
-  overflow: hidden;
-  border-bottom: 1px solid rgba(244,246,251,.06);
-}
-
-.hero__bg{
-  position:absolute;
-  inset: 0;
-  pointer-events:none;
-  overflow: hidden; /* extra safety */
-}
-
-.hero__content{ position: relative; z-index: 2; }
-
-.kicker{
-  display:flex;
-  gap: 10px;
-  align-items:center;
-  margin: 0 0 14px 0;
-  color: rgba(244,246,251,.68);
-  font-size: .85rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-.dot{
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(244,246,251,.75);
-  box-shadow: 0 0 0 6px rgba(59,130,246,.10);
-}
-
-.hero__headline{
-  margin: 0 0 12px 0;
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-}
-
-.accent{
-  color: var(--text);
-  position: relative;
-  display:inline-block;
-}
-.accent::after{
-  content:"";
-  position:absolute;
-  left: -6px;
-  right: -6px;
-  bottom: .08em;
-  height: .22em;
-  background: linear-gradient(90deg, rgba(59,130,246,.55), rgba(59,130,246,.05));
-  border-radius: 999px;
-  z-index: -1;
-  filter: blur(.2px);
-}
-
-.hero__subhead{
-  margin: 0;
-  max-width: 72ch;
-  color: rgba(244,246,251,.78);
-  font-size: 1.05rem;
-}
-
-.pillRow{
-  margin-top: 26px; /* slightly tighter */
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-.pill{
-  border: 1px solid rgba(244,246,251,.10);
-  background: rgba(255,255,255,.03);
-  border-radius: var(--radius);
-  padding: 14px 14px;
-  box-shadow: 0 14px 35px rgba(0,0,0,.35);
-  min-width: 0;
-}
-.pill__title{
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  font-size: .75rem;
-  color: rgba(244,246,251,.72);
-}
-.pill__desc{
-  margin-top: 8px;
-  color: rgba(244,246,251,.78);
-  font-size: .95rem;
-}
-
-/* =========================
-   SECTIONS (NORMALIZED SPACING)
-   ========================= */
-.section{
-  padding: clamp(3.6rem, 6vw, 5.6rem) 0; /* tightened */
-  position: relative;
-  overflow: hidden;
-}
-.section--tight{
-  padding: clamp(3.0rem, 5vw, 4.4rem) 0; /* tightened */
-}
-.sectionHead{ margin-bottom: 24px; }
-
-/* Split layout */
-.split{
-  display:grid;
-  grid-template-columns: 1.25fr .9fr;
-  gap: clamp(18px, 4vw, 46px);
-  align-items: start;
-}
-.microList{ margin-top: 16px; display:flex; flex-direction: column; gap: 10px; }
-.microList__item{
-  color: rgba(244,246,251,.78);
-  padding: 10px 12px;
-  border: 1px solid rgba(244,246,251,.10);
-  background: rgba(255,255,255,.02);
-  border-radius: 14px;
-}
-.tag{
-  display:inline-flex;
-  padding: 3px 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(59,130,246,.40);
-  color: rgba(244,246,251,.85);
-  background: rgba(59,130,246,.10);
-  font-size: .78rem;
-  margin-right: 10px;
-}
-
-/* =========================
-   VISUAL CARDS
-   ========================= */
-.visualCard{
-  position: relative;
-  border-radius: var(--radius2);
-  border: 1px solid rgba(244,246,251,.10);
-  background: radial-gradient(800px 400px at 20% 20%, rgba(59,130,246,.10), transparent 60%),
-              rgba(255,255,255,.02);
-  padding: 18px;
-  box-shadow: var(--shadow);
-  overflow:hidden;
-  min-height: 280px;
-}
-.visualCard__title{
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  font-size: .78rem;
-  color: rgba(244,246,251,.72);
-}
-.visualCard__sub{
-  margin-top: 8px;
-  color: rgba(244,246,251,.82);
-  font-weight: 650;
-  letter-spacing: -0.01em;
-}
-.visualCard__legend{
-  margin-top: 14px;
-  display:flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  color: rgba(244,246,251,.70);
-  font-size: .9rem;
-}
-.visualCard__legend .dot{
-  width: 8px; height: 8px; border-radius: 999px; display:inline-block;
-  margin-right: 6px;
-  box-shadow: none;
-}
-.dot--a{ background: rgba(59,130,246,.95); }
-.dot--b{ background: rgba(244,246,251,.75); }
-.dot--c{ background: rgba(59,130,246,.55); }
-
-/* =========================
-   SERVICES
-   ========================= */
-.serviceGrid{
-  margin-top: 22px;
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 18px;
-}
-.service{
-  border: 1px solid rgba(244,246,251,.10);
-  background: rgba(255,255,255,.02);
-  border-radius: var(--radius2);
-  box-shadow: 0 18px 45px rgba(0,0,0,.45);
-  overflow:hidden;
-  display:flex;
-  flex-direction: column;
-  min-height: 520px;
-}
-.service__head{ padding: 18px 18px 12px 18px; }
-.eyebrow{
-  margin: 0 0 10px 0;
-  font-size: .80rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: rgba(244,246,251,.65);
-}
-.bullets{
-  margin: 10px 18px 0 34px;
-  padding: 0;
-  color: rgba(244,246,251,.78);
-}
-.bullets li{ margin: 8px 0; }
-.service__visual{
-  margin-top: auto;
-  position: relative;
-  min-height: 210px;
-  border-top: 1px solid rgba(244,246,251,.08);
-  background: radial-gradient(900px 260px at 20% 30%, rgba(59,130,246,.14), transparent 55%);
-  overflow:hidden;
-}
-
-/* =========================
-   PROCESS / STEPS
-   ========================= */
-.steps{
-  margin-top: 22px;
-  display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-.step{
-  border: 1px solid rgba(244,246,251,.10);
-  background: rgba(255,255,255,.02);
-  border-radius: var(--radius2);
-  padding: 18px;
-  box-shadow: 0 18px 45px rgba(0,0,0,.40);
-}
-.step__num{
-  color: rgba(244,246,251,.55);
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  font-size: .85rem;
-  margin-bottom: 10px;
-}
-.step__title{ font-weight: 750; font-size: 1.2rem; margin-bottom: 8px; }
-.step__desc{ color: rgba(244,246,251,.70); }
-
-/* CTA band */
-.ctaBand{
-  margin-top: 26px;
-  position: relative;
-  border-radius: 28px;
-  border: 1px solid rgba(244,246,251,.10);
-  background: radial-gradient(900px 300px at 20% 30%, rgba(59,130,246,.12), transparent 55%),
-              rgba(255,255,255,.02);
-  box-shadow: var(--shadow);
-  overflow:hidden;
-}
-.ctaBand__inner{
-  position: relative;
-  z-index: 2;
-  padding: 22px;
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-.ctaBand__actions{ display:flex; gap: 12px; flex-wrap: wrap; }
-.ctaBand__visual{
-  position:absolute;
-  inset: 0;
-  pointer-events:none;
-  opacity: .95;
-  overflow:hidden;
-}
-
-/* =========================
-   FLOW SVG (CONTAINED)
-   ========================= */
-.flow{
-  position:absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: .95;
-  overflow: hidden; /* extra safety */
-}
-.flow--hero{
-  opacity: .85;
-  filter: drop-shadow(0 18px 24px rgba(0,0,0,.45));
-}
-.flow--card{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -20px;
-  top: 40px;
-  opacity: .95;
-}
-.flow__path{
-  fill: none;
-  stroke: rgba(244,246,251,.18);
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.flow__node{
-  fill: rgba(59,130,246,.92);
-  stroke: rgba(244,246,251,.55);
-  stroke-width: 2;
-}
-
-/* subtle motion */
-.flow--hero .flow__path{
-  stroke: rgba(244,246,251,.16);
-  stroke-width: 5;
-  stroke-dasharray: 10 10;
-  animation: dash 10s linear infinite;
-}
-@keyframes dash{ to{ stroke-dashoffset: -200; } }
-
-/* =========================
-   FOOTER
-   ========================= */
-.footer{
-  border-top: 1px solid rgba(244,246,251,.06);
-  padding: 24px 0 34px;
-  color: rgba(244,246,251,.68);
-}
-.footer__inner{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 14px;
-}
-.footer__right a{ color: rgba(244,246,251,.72); }
-
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width: 980px){
-  .pillRow{ grid-template-columns: 1fr; }
-  .split{ grid-template-columns: 1fr; }
-  .serviceGrid{ grid-template-columns: 1fr; }
-  .steps{ grid-template-columns: 1fr; }
-  .bgGrid{ transform: perspective(900px) rotateX(55deg) rotateZ(-10deg) translateY(-160px); }
-}
-/* =========================================
-   PATCH: prevent x-axis scroll + tighten contact hero
-   (add to end of styles.css)
-   ========================================= */
-
-/* Kill any accidental horizontal scroll */
-html, body { overflow-x: hidden; }
-body { max-width: 100%; }
-
-/* Make sure background SVG/grid never creates overflow */
-.hero, .pageHero { overflow: hidden; }
-.hero__bg, .pageHero__bg { overflow: hidden; }
-.flow { display: block; max-width: 100%; }
-
-/* Contact hero spacing: closer to homepage rhythm */
-.pageHero--contact{
-  padding: clamp(3.4rem, 5.5vw, 5.2rem) 0 clamp(2.6rem, 4.2vw, 3.6rem);
-}
-/* ===============================
-   CONTACT PAGE ISOLATION FIX
-   =============================== */
-
-/* Prevent horizontal scroll globally */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Contact page hero ONLY */
-.pageHero--contact {
-  position: relative;
-  padding: clamp(4rem, 7vw, 6rem) 0;
-  overflow: hidden;
-}
-
-/* Ensure hero background stays contained */
-.pageHero--contact .pageHero__bg {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-/* Kill inherited hero spacing rules */
-.pageHero--contact .pageHero__content > * {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* Contain SVG flows so they don’t create X scroll */
-.pageHero--contact svg.flow {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-/* CONTACT LAYOUT */
-.contactSplit {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 24px;
-  align-items: flex-start;
-}
-
-/* Form card containment */
-.contactCard {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Sidebar containment */
-.contactAside {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Mobile fix */
-@media (max-width: 980px) {
-  .contactSplit {
-    grid-template-columns: 1fr;
-  }
-}
-/* ===============================
-   PREMIUM FORM CONTROLS (CONTACT)
-   Paste at END of styles.css
-   =============================== */
-
-/* Force dark form UI + prevent Chrome native bright controls */
-.pageHero--contact,
-.contactCard,
-.contactAside{
-  color-scheme: dark;
-}
-
-/* Make sure our form styling wins (scoped + slightly higher specificity) */
-.contactCard .form :is(input, select, textarea){
-  -webkit-appearance: none;
-  appearance: none;
-
-  width: 100%;
-  border-radius: 14px;
-  border: 1px solid rgba(244,246,251,.16);
-  background: rgba(255,255,255,.04);
-  color: rgba(244,246,251,.90);
-
-  padding: 12px 12px;
-  outline: none;
-
-  /* subtle depth */
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
-}
-
-/* Better placeholder tone */
-.contactCard .form :is(input, textarea)::placeholder{
-  color: rgba(244,246,251,.42);
-}
-
-/* Focus feels premium */
-.contactCard .form :is(input, select, textarea):focus{
-  border-color: rgba(59,130,246,.65);
-  box-shadow:
-    0 0 0 6px rgba(59,130,246,.12),
-    inset 0 1px 0 rgba(255,255,255,.06);
-}
-
-/* --- SELECT: custom arrow + right padding --- */
-.contactCard .form select{
-  padding-right: 44px; /* room for arrow */
-  cursor: pointer;
-
-  /* Custom chevron (inline SVG) */
-  background-image:
-    linear-gradient(180deg, rgba(59,130,246,.12), rgba(59,130,246,.02)),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7 10l5 5 5-5' stroke='rgba(244,246,251,0.75)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 0 0, right 14px center;
-  background-size: auto, 18px 18px;
-}
-
-/* Remove IE arrow (just in case) */
-.contactCard .form select::-ms-expand{
-  display: none;
-}
-
-/* Dropdown list styling (Chrome/Edge/Firefox support varies) */
-.contactCard .form select option{
-  background: #0b0d10;
-  color: rgba(244,246,251,.92);
-}
-
-/* Disabled / placeholder option look */
-.contactCard .form select:invalid,
-.contactCard .form select option[value=""]{
-  color: rgba(244,246,251,.55);
-}
-
-/* Improve textarea resizing + avoid giant white box feel */
-.contactCard .form textarea{
-  resize: vertical;
-  min-height: 150px;
-  line-height: 1.5;
-}
-
-/* OPTIONAL: tighten label spacing a touch */
-.contactCard .form label{
-  color: rgba(244,246,251,.72);
-  font-weight: 650;
-}
-/* =========================================================
-   CONTACT FORM — DARK / GLASS CONTROLS (scoped, safe)
-   Paste at END of styles.css
-   ========================================================= */
-
-/* Only affect the contact page form area */
-.contactCard .field input,
-.contactCard .field select,
-.contactCard .field textarea{
-  width: 100%;
-  border-radius: 14px;
-  border: 1px solid rgba(244,246,251,.16);
-  background: rgba(255,255,255,.05);
-  color: rgba(244,246,251,.92);
-  padding: 12px 12px;
-  outline: none;
-
-  /* Kills the default “white box” look in many browsers */
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  /* Subtle depth */
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.18);
-}
-
-/* Placeholders */
-.contactCard .field input::placeholder,
-.contactCard .field textarea::placeholder{
-  color: rgba(244,246,251,.48);
-}
-
-/* Focus state */
-.contactCard .field input:focus,
-.contactCard .field select:focus,
-.contactCard .field textarea:focus{
-  border-color: rgba(59,130,246,.60);
-  box-shadow: 0 0 0 6px rgba(59,130,246,.10), inset 0 0 0 1px rgba(0,0,0,.18);
-}
-
-/* Textarea behavior */
-.contactCard .field textarea{
-  resize: vertical;
-  min-height: 140px;
-}
-
-/* SELECT: custom arrow + padding so it looks premium */
-.contactCard .field select{
-  padding-right: 44px; /* room for arrow */
-  cursor: pointer;
-
-  /* Custom arrow (two strokes) */
-  background-image:
-    linear-gradient(45deg, transparent 50%, rgba(244,246,251,.75) 50%),
-    linear-gradient(135deg, rgba(244,246,251,.75) 50%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(59,130,246,.14), rgba(59,130,246,0) 60%);
-  background-position:
-    calc(100% - 20px) 52%,
-    calc(100% - 14px) 52%,
-    calc(100% - 26px) 50%;
-  background-size:
-    6px 6px,
-    6px 6px,
-    26px 26px;
-  background-repeat: no-repeat;
-}
-
-/* Options dropdown panel (this varies by OS/browser, but helps where supported) */
-.contactCard .field select option{
-  background: #0b0d10;
-  color: rgba(244,246,251,.92);
-}
-
-/* If Chrome still tries to “help” with white autofill */
-.contactCard input:-webkit-autofill,
-.contactCard textarea:-webkit-autofill,
-.contactCard select:-webkit-autofill{
-  -webkit-text-fill-color: rgba(244,246,251,.92);
-  -webkit-box-shadow: 0 0 0px 1000px rgba(12,14,18,.85) inset;
-  box-shadow: 0 0 0px 1000px rgba(12,14,18,.85) inset;
-  border: 1px solid rgba(244,246,251,.16);
-}
-/* =========================
-   WORK PAGE FIX PACK
-   Paste at END of styles.css
-   ========================= */
-
-/* 1) Kill the horizontal scroll (the white strip on the right) */
-html, body {
-  overflow-x: hidden;
-}
-
-/* Any full-bleed hero background/SVG can cause overflow */
-.pageHero,
-.pageHero__bg,
-.pageHero__content,
-.section,
-.container {
-  max-width: 100%;
-}
-
-.pageHero__bg {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-/* Make sure your SVG never pushes layout wider than viewport */
-.pageHero__bg svg,
-.flow {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  overflow: hidden;
-}
-
-/* If any animated path/glow creates overflow, this catches it */
-.pageHero__bg * {
-  max-width: 100%;
-}
-
-/* 2) Make the filter “chips” look like WLD.R (no white boxes) */
-.pageHero--work .chipRow {
-  margin-top: 18px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.pageHero--work .chip {
-  appearance: none;
-  -webkit-appearance: none;
-  border: 1px solid rgba(244,246,251,.14);
-  background: rgba(255,255,255,.02);
-  color: rgba(244,246,251,.78);
-  padding: 10px 12px;
-  border-radius: 999px;
-  font-weight: 650;
-  letter-spacing: .02em;
-  cursor: pointer;
-  line-height: 1;
-}
-
-.pageHero--work .chip:hover {
-  border-color: rgba(59,130,246,.55);
-  background: linear-gradient(180deg, rgba(59,130,246,.14), rgba(59,130,246,.06));
-  color: rgba(244,246,251,.92);
-}
-
-.pageHero--work .chip.is-active,
-.pageHero--work .chip[aria-selected="true"] {
-  border-color: rgba(59,130,246,.70);
-  background: linear-gradient(180deg, rgba(59,130,246,.20), rgba(59,130,246,.08));
-  color: rgba(244,246,251,.95);
-}
-
-/* 3) Fix the work layout: turn the stack into real cards */
-.workGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  align-items: stretch;
-}
-
-@media (max-width: 980px) {
-  .workGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Card container */
-.workCard {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgba(244,246,251,.10);
-  background: rgba(255,255,255,.02);
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: 0 18px 45px rgba(0,0,0,.45);
-  min-height: 320px;
-}
-
-/* Small “pill” label */
-.workCard__pill {
-  display: inline-flex;
-  width: fit-content;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(59,130,246,.40);
-  background: rgba(59,130,246,.10);
-  color: rgba(244,246,251,.85);
-  font-size: .78rem;
-  letter-spacing: .10em;
-  text-transform: uppercase;
-}
-
-/* Typography */
-.workCard__title {
-  margin-top: 12px;
-  font-weight: 780;
-  font-size: 1.18rem;
-  letter-spacing: -0.01em;
-  color: rgba(244,246,251,.95);
-}
-
-.workCard__desc {
-  margin-top: 10px;
-  color: rgba(244,246,251,.72);
-  line-height: 1.45;
-}
-
-/* Meta rows */
-.workCard__meta {
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(244,246,251,.08);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  color: rgba(244,246,251,.72);
-}
-
-.workCard__meta .metaItem span {
-  display: block;
-  color: rgba(244,246,251,.55);
-  font-size: .75rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-
-/* Actions stay at bottom */
-.workCard__actions {
-  margin-top: auto;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding-top: 16px;
-}
-
-/* 4) Optional: ensure buttons look consistent inside cards (if any defaults leak in) */
-.workCard button.btn,
-.workCard a.btn {
-  text-decoration: none;
-}
-
-/* 5) Safety: if any generic button styles are forcing white backgrounds, override ONLY for chips */
-.pageHero--work button.chip {
-  background-color: rgba(255,255,255,.02) !important;
-  color: rgba(244,246,251,.78) !important;
-  border-color: rgba(244,246,251,.14) !important;
-}
-/* =======================================================================
-   WORK PAGE FIX PACK (scoped) — improves chips + grid + card rhythm
-   Safe: does NOT change homepage hero
-   ======================================================================= */
-
-/* Kill random horizontal scroll (safe global guard) */
-html, body { overflow-x: hidden; }
-
-/* -------------------------
-   Work hero spacing
--------------------------- */
-.pageHero--work .pageHero__content{
-  max-width: 1100px;
-}
-
-.pageHero--work .pageHero__lead{
-  max-width: 70ch;
-}
-
-/* -------------------------
-   Filter chips (fix "white button" look)
--------------------------- */
-.pageHero--work .chipRow{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 18px;
-}
-
-/* Important: normalize button defaults so they don't render like Windows white buttons */
-.pageHero--work .chipRow .chip{
-  appearance: none;
-  -webkit-appearance: none;
-  border: 1px solid rgba(244,246,251,.16);
-  background: rgba(255,255,255,.04);
-  color: rgba(244,246,251,.86);
-  border-radius: 999px;
-  padding: 9px 12px;
-  font-size: .9rem;
-  font-weight: 650;
-  letter-spacing: .02em;
-  line-height: 1;
-  cursor: pointer;
-  transition: transform .12s ease, background .12s ease, border-color .12s ease;
-}
-
-.pageHero--work .chipRow .chip:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.06);
-  border-color: rgba(59,130,246,.40);
-}
-
-.pageHero--work .chipRow .chip.is-active{
-  border-color: rgba(59,130,246,.55);
-  background: linear-gradient(
-    180deg,
-    rgba(59,130,246,.20),
-    rgba(59,130,246,.08)
-  );
-  color: rgba(244,246,251,.96);
-  box-shadow: 0 0 0 5px rgba(59,130,246,.10);
-}
-
-/* Keyboard focus */
-.pageHero--work .chipRow .chip:focus-visible{
-  outline: none;
-  box-shadow: 0 0 0 6px rgba(59,130,246,.16);
-  border-color: rgba(59,130,246,.55);
-}
-
-/* -------------------------
-   Work grid layout (fix "stacked text dump" look)
--------------------------- */
-#workGrid.workGrid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  align-items: stretch;
-}
-
-/* Cards should look like cards, not raw text on background */
-#workGrid .workCard{
-  display: flex;
-  flex-direction: column;
-  min-height: 320px;
-  padding: 18px;
-  border-radius: var(--radius2, 18px);
-  border: 1px solid rgba(244,246,251,.12);
-  background: rgba(255,255,255,.03);
-  box-shadow: 0 18px 45px rgba(0,0,0,.45);
-  backdrop-filter: blur(6px);
-}
-
-/* Header rhythm */
-#workGrid .workCard__pill{
-  display: inline-flex;
-  width: fit-content;
-  padding: 7px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(59,130,246,.40);
-  background: rgba(59,130,246,.10);
-  color: rgba(244,246,251,.86);
-  font-size: .78rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-#workGrid .workCard__title{
-  margin-top: 12px;
-  font-size: 1.18rem;
-  font-weight: 800;
-  letter-spacing: -.01em;
-  color: rgba(244,246,251,.95);
-}
-
-#workGrid .workCard__desc{
-  margin-top: 10px;
-  color: rgba(244,246,251,.74);
-  line-height: 1.45;
-}
-
-/* Meta blocks */
-#workGrid .workCard__meta{
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(244,246,251,.08);
-  display: grid;
-  gap: 10px;
-}
-
-#workGrid .metaItem{
-  display: grid;
-  gap: 2px;
-  color: rgba(244,246,251,.78);
-  font-size: .95rem;
-}
-
-#workGrid .metaItem span{
-  color: rgba(244,246,251,.55);
-  font-size: .75rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  font-weight: 800;
-}
-
-/* Actions pinned to bottom */
-#workGrid .workCard__actions{
-  margin-top: auto;
-  padding-top: 16px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-/* -------------------------
-   Responsive: 3 → 2 → 1 columns
--------------------------- */
-@media (max-width: 980px){
-  #workGrid.workGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 640px){
-  #workGrid.workGrid{ grid-template-columns: 1fr; }
-}
+<header class="siteHeader">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="/">
+        <img class="brand__logo" src="/assets/img/wldr-logo.png" alt="WLD.R logo" />
+      </a>
+
+      <div class="nav__links">
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
+        <a href="#offer">Offer</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav__cta">
+        <a class="btn" href="/work.html">View work</a>
+        <a class="btn btn--primary" href="#contact">Start a conversation</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__wrap">
+        <div>
+          <div class="kicker">Engineering discipline × creative execution</div>
+          <h1 class="hero__title">
+            Marketing that actually gets <span class="accent">fixed</span>.
+          </h1>
+          <p>
+            WLD.R helps founder-led businesses fix broken marketing systems and leave them
+            running better than before.
+          </p>
+
+          <div class="hero__meta">
+            <div class="chip">Clarity</div>
+            <div class="chip">Completion</div>
+            <div class="chip">Consistency</div>
+            <div class="chip">Feedback loops</div>
+          </div>
+
+          <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn--primary" href="#contact">Start a conversation</a>
+            <a class="btn" href="#offer">See the 30-day fix</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__inner">
+            <div class="kicker">What we do</div>
+            <h2>Execution between strategy and reality.</h2>
+            <p>
+              When marketing feels stuck, scattered, or half-finished, we diagnose what’s
+              not working, fix the highest-impact issues, and build a system your team can run.
+            </p>
+
+            <ul class="bullets">
+              <li><span class="dot"></span><span>Positioning & messaging clarity</span></li>
+              <li><span class="dot"></span><span>Website / funnel friction fixes</span></li>
+              <li><span class="dot"></span><span>Campaigns & launches that actually ship</span></li>
+              <li><span class="dot"></span><span>Content systems built for consistency</span></li>
+              <li><span class="dot"></span><span>Simple measurement + iteration loops</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="sep" />
+
+  <!-- PROBLEM -->
+  <section class="section section--tight">
+    <div class="container grid grid--2">
+      <div>
+        <h2>Most marketing isn’t broken — it’s unfinished.</h2>
+        <p>
+          Businesses don’t struggle because they lack ideas or tools. They struggle because
+          nothing is connected, nothing is finished, and nothing compounds.
+        </p>
+        <p>
+          Campaigns stall. Messaging drifts. Content exists, but it doesn’t convert. Internal teams
+          are busy, but momentum is missing. WLD.R steps into that gap: we clean up the chaos, fix what
+          matters most, and leave behind systems that actually run.
+        </p>
+      </div>
+
+      <div class="panel">
+        <div class="panel__inner">
+          <div class="kicker">The outcome</div>
+          <h3 style="margin-top:8px;">Momentum, not noise.</h3>
+          <p style="margin-top:8px;">
+            The deliverable isn’t “more marketing.” It’s a working system: clear messaging, clean execution,
+            consistent output, and feedback that improves results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section id="offer" class="section">
+    <div class="container">
+      <div class="grid grid--2">
+        <div>
+          <div class="kicker">Core engagement</div>
+          <h2>The 30-Day Marketing Fix</h2>
+          <p>
+            A focused engagement to fix what’s broken and leave your marketing in a better place than we found it.
+            No long retainers. No trend chasing. Just surgical execution with a clear start and finish.
+          </p>
+
+          <div class="card">
+            <div class="panel__inner">
+              <div class="kicker">What happens</div>
+              <ul class="bullets">
+                <li><span class="dot"></span><span><strong>Week 1:</strong> Audit & diagnose</span></li>
+                <li><span class="dot"></span><span><strong>Weeks 2–3:</strong> Fix & build</span></li>
+                <li><span class="dot"></span><span><strong>Week 4:</strong> Stabilize & hand off</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__inner">
+            <div class="kicker">Good fit if…</div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>You feel stuck, scattered, or inconsistent</span></li>
+              <li><span class="dot"></span><span>Your team is busy but momentum is missing</span></li>
+              <li><span class="dot"></span><span>You want clarity + execution, not more ideas</span></li>
+              <li><span class="dot"></span><span>You want systems that keep running after we’re done</span></li>
+            </ul>
+
+            <hr class="sep" />
+
+            <div class="kicker">Not a fit if…</div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>You want daily posting / trend chasing</span></li>
+              <li><span class="dot"></span><span>You want endless revisions without decisions</span></li>
+              <li><span class="dot"></span><span>You want “someone to manage social” only</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section section--tight">
+    <div class="container panel">
+      <div class="panel__inner">
+        <div class="kicker">Why WLD.R</div>
+        <h2 style="margin-top:10px;">Built to ship under real constraints.</h2>
+        <p>
+          WLD.R isn’t a traditional agency. It’s built by someone who’s spent years shipping real things —
+          products, programs, events, and systems — under real constraints. We don’t overpromise. We don’t add
+          unnecessary complexity. We focus on what actually moves the needle.
+        </p>
+        <p>
+          You don’t need more ideas. You need things to work. That’s what WLD.R is here for.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container grid grid--2">
+      <div>
+        <h2>Let’s see what’s not working.</h2>
+        <p>
+          If your marketing feels off — stuck, messy, or unfinished — start a conversation.
+          No pressure. No pitch. Just clarity.
+        </p>
+
+        <!-- Replace with your existing form/handler -->
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn--primary" href="mailto:you@yourdomain.com?subject=WLD.R%20Inquiry">Email WLD.R</a>
+          <a class="btn" href="/work.html">View work</a>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__inner">
+          <div class="kicker">What to send</div>
+          <ul class="bullets">
+            <li><span class="dot"></span><span>What’s the business + what you sell</span></li>
+            <li><span class="dot"></span><span>What feels broken right now</span></li>
+            <li><span class="dot"></span><span>Any links (site / socials)</span></li>
+            <li><span class="dot"></span><span>What “working” would look like</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+      <div>© <span id="year"></span> WLD.R — Where legacy drives results</div>
+      <div style="display:flex; gap:14px;">
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
