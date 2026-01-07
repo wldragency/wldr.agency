@@ -13,7 +13,7 @@
   <header class="siteHeader">
     <div class="container">
       <div class="nav">
-        <a class="brand" href="index.html">
+        <a class="brand" href="index.html" aria-label="WLD.R home">
           <img class="brand__logo" src="assets/WLDR-Logo.png" alt="WLD.R logo" />
         </a>
 
@@ -21,11 +21,7 @@
           <a href="work.html">Work</a>
           <a href="contact.html">Contact</a>
         </div>
-
-        <div class="nav__cta">
-          <a class="btn" href="work.html">View work</a>
-          <a class="btn btn--primary" href="#intake">Start a conversation</a>
-        </div>
+        <!-- intentionally no CTA here -->
       </div>
     </div>
   </header>
@@ -68,7 +64,7 @@
     </section>
 
     <!-- INTAKE -->
-    <section id="intake" class="zone zone--offer">
+    <section class="zone zone--offer">
       <div class="container">
         <div class="section section--tight">
           <div class="grid grid--2">
@@ -76,11 +72,11 @@
               <h2>Project intake</h2>
               <p>
                 This goes directly to <strong>support@wldr.agency</strong>.
-                A few bullets is perfect.
+                Two paragraphs or bullets is perfect.
               </p>
 
               <p class="miniNote">
-                Prefer email?  
+                Prefer email?
                 <a href="mailto:support@wldr.agency">support@wldr.agency</a>
               </p>
             </div>
@@ -95,17 +91,17 @@
                 >
                   <div class="form__row">
                     <label class="form__label">Name</label>
-                    <input class="form__input" type="text" name="name" required />
+                    <input class="form__input" type="text" name="name" placeholder="Your name" required />
                   </div>
 
                   <div class="form__row">
                     <label class="form__label">Email</label>
-                    <input class="form__input" type="email" name="email" required />
+                    <input class="form__input" type="email" name="email" placeholder="you@company.com" required />
                   </div>
 
                   <div class="form__row">
                     <label class="form__label">Company / Brand</label>
-                    <input class="form__input" type="text" name="company" />
+                    <input class="form__input" type="text" name="company" placeholder="Brand name" />
                   </div>
 
                   <div class="form__row">
@@ -127,7 +123,7 @@
                       <option>Fix website / funnel</option>
                       <option>Launch / campaign assets</option>
                       <option>Build a content system</option>
-                      <option>Not sure</option>
+                      <option>Not sure (diagnose it)</option>
                     </select>
                   </div>
 
@@ -137,7 +133,7 @@
                       class="form__textarea"
                       name="details"
                       rows="6"
-                      placeholder="What are you launching? What’s not working?"
+                      placeholder="What are you building? What’s not working? What does success look like?"
                     ></textarea>
                   </div>
 
@@ -147,7 +143,9 @@
                   </div>
 
                   <div class="form__actions">
-                    <button class="btn btn--primary" type="submit">Send</button>
+                    <button class="btn btn--primary" type="submit">
+                      Send
+                    </button>
                   </div>
 
                   <p class="form__fineprint">
@@ -161,25 +159,25 @@
       </div>
     </section>
 
-    <!-- FINAL CONTEXT (no CTA) -->
+    <!-- WHAT HAPPENS NEXT -->
     <section class="zone zone--contact">
       <div class="container">
         <div class="section section--tight">
           <div class="grid grid--2">
             <div>
-              <h2>Not sure what you need yet?</h2>
+              <h2>What happens next</h2>
               <p>
-                Totally normal. If you can describe what feels off, we can diagnose the rest.
+                If we’re a fit, you’ll get a tight scope with a clear start date and deliverables.
               </p>
             </div>
 
             <div class="panel panel--tint">
               <div class="panel__inner">
-                <div class="kicker">Common symptoms</div>
+                <div class="kicker">Response expectations</div>
                 <ul class="bullets">
-                  <li><span class="dot"></span>“We have ideas, but nothing ships.”</li>
-                  <li><span class="dot"></span>“We’re inconsistent.”</li>
-                  <li><span class="dot"></span>“The site doesn’t convert.”</li>
+                  <li><span class="dot"></span>Quick read + clarification questions</li>
+                  <li><span class="dot"></span>Proposed scope (tight, practical)</li>
+                  <li><span class="dot"></span>Clear start date + deliverables</li>
                 </ul>
               </div>
             </div>
