@@ -10,272 +10,225 @@
 
 <body>
   <!-- NAV -->
-  <header class="siteHeader">
-    <nav class="nav">
-      <div class="container nav__inner">
-        <a class="nav__logo" href="/" aria-label="WLD.R Home">WLD.R</a>
+ <header class="siteHeader">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="/">
+        <img class="brand__logo" src="/assets/img/wldr-logo.png" alt="WLD.R logo" />
+      </a>
 
-        <div class="nav__links">
-          <a class="nav__link" href="/work.html">Work</a>
-          <a class="nav__pill" href="/contact.html">Start a Project</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- HERO -->
-  <main>
-    <section class="hero" aria-label="WLD.R Hero">
-      <div class="hero__bg" aria-hidden="true">
-        <!-- Subtle grid -->
-        <div class="bgGrid"></div>
-
-        <!-- System flow line (contained to hero only) -->
-        <svg class="flow flow--hero" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
-          <path class="flow__path" d="M-40,520 C200,420 300,260 520,250 C760,235 820,420 1020,420 C1140,420 1200,360 1250,320" />
-          <circle class="flow__node" cx="300" cy="260" r="6"/>
-          <circle class="flow__node" cx="520" cy="250" r="7"/>
-          <circle class="flow__node" cx="820" cy="420" r="6"/>
-          <circle class="flow__node" cx="1020" cy="420" r="7"/>
-        </svg>
-
-        <!-- Accent glow -->
-        <div class="bgGlow"></div>
+      <div class="nav__links">
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
+        <a href="#offer">Offer</a>
+        <a href="#contact">Contact</a>
       </div>
 
-      <div class="container hero__content">
-        <p class="kicker"><span class="dot"></span> ANTI-FLUFF MARKETING // BUILT FOR TRACTION</p>
-
-        <h1 class="hero__headline">
-          Stop buying marketing.<br />
-          <span class="accent">Build a system.</span>
-        </h1>
-
-        <p class="hero__subhead">
-          WLD.R turns strategy into execution—brand clarity, campaigns, and content that cut through noise
-          and drive momentum. No vanity. No chaos. Just traction.
-        </p>
-
-        <div class="actions">
-          <a class="btn btn--primary" href="/contact.html">Start a Project</a>
-          <a class="btn btn--ghost" href="/work.html">See Work</a>
-        </div>
-
-        <div class="pillRow" aria-label="Capabilities">
-          <div class="pill">
-            <div class="pill__title">Positioning</div>
-            <div class="pill__desc">Clarity that makes decisions faster</div>
-          </div>
-          <div class="pill">
-            <div class="pill__title">Execution</div>
-            <div class="pill__desc">Campaigns that ship on time</div>
-          </div>
-          <div class="pill">
-            <div class="pill__title">Repeatability</div>
-            <div class="pill__desc">Systems that make consistency easy</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHAT WE DO (CLEAN + COMPACT) -->
-    <section class="section section--tight" id="what-we-do">
-      <div class="container split">
-        <div class="split__left">
-          <h2 class="h2">What We Do</h2>
-          <p class="lead">
-            We build connected marketing ecosystems—so every asset works together and drives one outcome: traction.
-            You don’t leave with “a logo” or “some posts.” You leave with a system.
-          </p>
-
-          <div class="microList">
-            <div class="microList__item"><span class="tag">Brand</span> Strategy, positioning, voice, identity rules</div>
-            <div class="microList__item"><span class="tag">Campaigns</span> Concept → creative direction → launch assets</div>
-            <div class="microList__item"><span class="tag">Content</span> Templates, playbooks, repeatable output</div>
-          </div>
-
-          <div class="actions actions--inline">
-            <a class="btn btn--primary" href="/contact.html">Start a Project</a>
-            <a class="btn btn--ghost" href="/work.html">See Work</a>
-          </div>
-        </div>
-
-        <div class="split__right" aria-hidden="true">
-          <div class="visualCard">
-            <div class="visualCard__title">System Map</div>
-            <div class="visualCard__sub">Strategy → Assets → Launch → Momentum</div>
-
-            <svg class="flow flow--card" viewBox="0 0 560 320" preserveAspectRatio="none" aria-hidden="true">
-              <path class="flow__path" d="M30,240 C120,120 210,210 290,160 C380,100 420,210 530,120" />
-              <circle class="flow__node" cx="120" cy="170" r="6"/>
-              <circle class="flow__node" cx="290" cy="160" r="7"/>
-              <circle class="flow__node" cx="420" cy="190" r="6"/>
-              <circle class="flow__node" cx="530" cy="120" r="7"/>
-            </svg>
-
-            <div class="visualCard__legend">
-              <span><i class="dot dot--a"></i> Clarity</span>
-              <span><i class="dot dot--b"></i> Output</span>
-              <span><i class="dot dot--c"></i> Traction</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES (NORMALIZED RHYTHM) -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2">Services</h2>
-          <p class="lead">
-            Three pillars. One system. Each piece is designed to connect—so you’re not paying for random deliverables.
-          </p>
-        </div>
-
-        <div class="serviceGrid">
-          <article class="service">
-            <div class="service__head">
-              <p class="eyebrow">Brand Strategy</p>
-              <h3 class="h3">Clarity, Identity, Direction</h3>
-              <p class="copy">
-                Positioning, voice, and identity systems built for real-world use—so your brand stays consistent without constant oversight.
-              </p>
-            </div>
-
-            <ul class="bullets">
-              <li>Positioning + messaging framework</li>
-              <li>Visual identity + brand rules</li>
-              <li>Creative direction + templates</li>
-            </ul>
-
-            <div class="service__visual" aria-hidden="true">
-              <svg class="flow flow--service" viewBox="0 0 640 260" preserveAspectRatio="none">
-                <path class="flow__path" d="M0,190 C140,90 240,220 360,120 C460,40 540,120 640,70" />
-                <circle class="flow__node" cx="140" cy="140" r="6"/>
-                <circle class="flow__node" cx="360" cy="120" r="7"/>
-                <circle class="flow__node" cx="540" cy="120" r="6"/>
-              </svg>
-            </div>
-          </article>
-
-          <article class="service">
-            <div class="service__head">
-              <p class="eyebrow">Campaign Execution</p>
-              <h3 class="h3">Concept → Launch Assets</h3>
-              <p class="copy">
-                Campaigns designed to convert attention into action—built fast, aligned, and ready to deploy across channels.
-              </p>
-            </div>
-
-            <ul class="bullets">
-              <li>Campaign concept + creative direction</li>
-              <li>Launch assets + content packages</li>
-              <li>Landing/offer structure guidance</li>
-            </ul>
-
-            <div class="service__visual" aria-hidden="true">
-              <svg class="flow flow--service" viewBox="0 0 640 260" preserveAspectRatio="none">
-                <path class="flow__path" d="M0,120 C160,40 220,200 360,120 C450,70 520,150 640,90" />
-                <circle class="flow__node" cx="160" cy="85" r="6"/>
-                <circle class="flow__node" cx="360" cy="120" r="7"/>
-                <circle class="flow__node" cx="520" cy="150" r="6"/>
-              </svg>
-            </div>
-          </article>
-
-          <article class="service">
-            <div class="service__head">
-              <p class="eyebrow">Content Systems</p>
-              <h3 class="h3">Repeatable Output</h3>
-              <p class="copy">
-                Systems that make consistency easy—so content stays on-brand and sustainable without burnout.
-              </p>
-            </div>
-
-            <ul class="bullets">
-              <li>Content pillars + formats</li>
-              <li>Templates + posting system</li>
-              <li>Creative playbooks</li>
-            </ul>
-
-            <div class="service__visual" aria-hidden="true">
-              <svg class="flow flow--service" viewBox="0 0 640 260" preserveAspectRatio="none">
-                <path class="flow__path" d="M0,160 C120,70 260,210 360,120 C460,40 540,160 640,110" />
-                <circle class="flow__node" cx="120" cy="120" r="6"/>
-                <circle class="flow__node" cx="360" cy="120" r="7"/>
-                <circle class="flow__node" cx="540" cy="160" r="6"/>
-              </svg>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="section" id="process">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2">How We Work</h2>
-          <p class="lead">
-            Strategy first. Creative second. Execution always. We don’t pitch endless concepts. We build what works—then we make it repeatable.
-          </p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step__num">01</div>
-            <div class="step__title">Clarify</div>
-            <div class="step__desc">Define what you do, who it’s for, and what you want to be known for.</div>
-          </div>
-          <div class="step">
-            <div class="step__num">02</div>
-            <div class="step__title">Build</div>
-            <div class="step__desc">Design the system: identity, messaging, content structure, campaign framework.</div>
-          </div>
-          <div class="step">
-            <div class="step__num">03</div>
-            <div class="step__title">Execute</div>
-            <div class="step__desc">Ship the assets, launch the campaign, and build momentum you can maintain.</div>
-          </div>
-        </div>
-
-        <div class="ctaBand">
-          <div class="ctaBand__inner">
-            <div>
-              <h3 class="h3">Ready to build traction?</h3>
-              <p class="copy copy--muted">Tell us what you’re trying to launch and we’ll map the system.</p>
-            </div>
-            <div class="ctaBand__actions">
-              <a class="btn btn--primary" href="/contact.html">Let’s Build Traction</a>
-              <a class="btn btn--ghost" href="/work.html">See Work</a>
-            </div>
-          </div>
-
-          <div class="ctaBand__visual" aria-hidden="true">
-            <svg class="flow flow--band" viewBox="0 0 1200 240" preserveAspectRatio="none">
-              <path class="flow__path" d="M-40,160 C220,40 420,240 620,120 C760,40 960,200 1240,80" />
-              <circle class="flow__node" cx="220" cy="100" r="6"/>
-              <circle class="flow__node" cx="620" cy="120" r="7"/>
-              <circle class="flow__node" cx="960" cy="200" r="6"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__left">© <span id="year"></span> WLD.R</div>
-      <div class="footer__right">
-        <a href="mailto:support@wldr.agency">support@wldr.agency</a>
+      <div class="nav__cta">
+        <a class="btn" href="/work.html">View work</a>
+        <a class="btn btn--primary" href="#contact">Start a conversation</a>
       </div>
     </div>
-  </footer>
+  </div>
+</header>
 
-  <script>
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__wrap">
+        <div>
+          <div class="kicker">Engineering discipline × creative execution</div>
+          <h1 class="hero__title">
+            Marketing that actually gets <span class="accent">fixed</span>.
+          </h1>
+          <p>
+            WLD.R helps founder-led businesses fix broken marketing systems and leave them
+            running better than before.
+          </p>
+
+          <div class="hero__meta">
+            <div class="chip">Clarity</div>
+            <div class="chip">Completion</div>
+            <div class="chip">Consistency</div>
+            <div class="chip">Feedback loops</div>
+          </div>
+
+          <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn--primary" href="#contact">Start a conversation</a>
+            <a class="btn" href="#offer">See the 30-day fix</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__inner">
+            <div class="kicker">What we do</div>
+            <h2>Execution between strategy and reality.</h2>
+            <p>
+              When marketing feels stuck, scattered, or half-finished, we diagnose what’s
+              not working, fix the highest-impact issues, and build a system your team can run.
+            </p>
+
+            <ul class="bullets">
+              <li><span class="dot"></span><span>Positioning & messaging clarity</span></li>
+              <li><span class="dot"></span><span>Website / funnel friction fixes</span></li>
+              <li><span class="dot"></span><span>Campaigns & launches that actually ship</span></li>
+              <li><span class="dot"></span><span>Content systems built for consistency</span></li>
+              <li><span class="dot"></span><span>Simple measurement + iteration loops</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="sep" />
+
+  <!-- PROBLEM -->
+  <section class="section section--tight">
+    <div class="container grid grid--2">
+      <div>
+        <h2>Most marketing isn’t broken — it’s unfinished.</h2>
+        <p>
+          Businesses don’t struggle because they lack ideas or tools. They struggle because
+          nothing is connected, nothing is finished, and nothing compounds.
+        </p>
+        <p>
+          Campaigns stall. Messaging drifts. Content exists, but it doesn’t convert. Internal teams
+          are busy, but momentum is missing. WLD.R steps into that gap: we clean up the chaos, fix what
+          matters most, and leave behind systems that actually run.
+        </p>
+      </div>
+
+      <div class="panel">
+        <div class="panel__inner">
+          <div class="kicker">The outcome</div>
+          <h3 style="margin-top:8px;">Momentum, not noise.</h3>
+          <p style="margin-top:8px;">
+            The deliverable isn’t “more marketing.” It’s a working system: clear messaging, clean execution,
+            consistent output, and feedback that improves results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER -->
+  <section id="offer" class="section">
+    <div class="container">
+      <div class="grid grid--2">
+        <div>
+          <div class="kicker">Core engagement</div>
+          <h2>The 30-Day Marketing Fix</h2>
+          <p>
+            A focused engagement to fix what’s broken and leave your marketing in a better place than we found it.
+            No long retainers. No trend chasing. Just surgical execution with a clear start and finish.
+          </p>
+
+          <div class="card">
+            <div class="panel__inner">
+              <div class="kicker">What happens</div>
+              <ul class="bullets">
+                <li><span class="dot"></span><span><strong>Week 1:</strong> Audit & diagnose</span></li>
+                <li><span class="dot"></span><span><strong>Weeks 2–3:</strong> Fix & build</span></li>
+                <li><span class="dot"></span><span><strong>Week 4:</strong> Stabilize & hand off</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__inner">
+            <div class="kicker">Good fit if…</div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>You feel stuck, scattered, or inconsistent</span></li>
+              <li><span class="dot"></span><span>Your team is busy but momentum is missing</span></li>
+              <li><span class="dot"></span><span>You want clarity + execution, not more ideas</span></li>
+              <li><span class="dot"></span><span>You want systems that keep running after we’re done</span></li>
+            </ul>
+
+            <hr class="sep" />
+
+            <div class="kicker">Not a fit if…</div>
+            <ul class="bullets">
+              <li><span class="dot"></span><span>You want daily posting / trend chasing</span></li>
+              <li><span class="dot"></span><span>You want endless revisions without decisions</span></li>
+              <li><span class="dot"></span><span>You want “someone to manage social” only</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section section--tight">
+    <div class="container panel">
+      <div class="panel__inner">
+        <div class="kicker">Why WLD.R</div>
+        <h2 style="margin-top:10px;">Built to ship under real constraints.</h2>
+        <p>
+          WLD.R isn’t a traditional agency. It’s built by someone who’s spent years shipping real things —
+          products, programs, events, and systems — under real constraints. We don’t overpromise. We don’t add
+          unnecessary complexity. We focus on what actually moves the needle.
+        </p>
+        <p>
+          You don’t need more ideas. You need things to work. That’s what WLD.R is here for.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container grid grid--2">
+      <div>
+        <h2>Let’s see what’s not working.</h2>
+        <p>
+          If your marketing feels off — stuck, messy, or unfinished — start a conversation.
+          No pressure. No pitch. Just clarity.
+        </p>
+
+        <!-- Replace with your existing form/handler -->
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn--primary" href="mailto:you@yourdomain.com?subject=WLD.R%20Inquiry">Email WLD.R</a>
+          <a class="btn" href="/work.html">View work</a>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__inner">
+          <div class="kicker">What to send</div>
+          <ul class="bullets">
+            <li><span class="dot"></span><span>What’s the business + what you sell</span></li>
+            <li><span class="dot"></span><span>What feels broken right now</span></li>
+            <li><span class="dot"></span><span>Any links (site / socials)</span></li>
+            <li><span class="dot"></span><span>What “working” would look like</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+      <div>© <span id="year"></span> WLD.R — Where legacy drives results</div>
+      <div style="display:flex; gap:14px;">
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
     // tiny helper for footer year (safe, optional)
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
