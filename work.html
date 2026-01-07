@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- HEADER / NAV (same as index) -->
+  <!-- HEADER (clean, no buttons) -->
   <header class="siteHeader">
     <div class="container">
       <div class="nav">
@@ -21,17 +21,12 @@
           <a href="work.html">Work</a>
           <a href="contact.html">Contact</a>
         </div>
-
-        <div class="nav__cta">
-          <a class="btn" href="work.html">View work</a>
-          <a class="btn btn--primary" href="contact.html">Start a conversation</a>
-        </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ZONE 1: HERO (same feel as index) -->
+    <!-- HERO -->
     <section class="zone zone--hero">
       <div class="container">
         <div class="hero">
@@ -40,8 +35,7 @@
               <div class="kicker">Selected work</div>
               <h1 class="hero__title">Systems that ship.</h1>
               <p class="lead">
-                A few examples of how WLD.R turns strategy into execution—brand clarity, campaigns, and content systems
-                built to compound.
+                A few examples of how WLD.R turns strategy into execution—brand clarity, campaigns, and content systems built to compound.
               </p>
 
               <div class="hero__meta">
@@ -51,10 +45,14 @@
                 <div class="chip">Conversion fixes</div>
               </div>
 
+              <!-- ONLY CTA -->
               <div class="hero__actions">
                 <a class="btn btn--primary" href="contact.html">Start a conversation</a>
-                <a class="btn" href="index.html#offer">See the 30-day fix</a>
               </div>
+
+              <p class="miniNote">
+                Want the core offer? <a href="index.html#offer">See the 30-day fix</a>.
+              </p>
             </div>
 
             <div class="panel panel--tint">
@@ -67,40 +65,20 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </div><!-- /hero__wrap -->
         </div><!-- /hero -->
       </div><!-- /container -->
     </section>
 
-    <!-- ZONE 2: WORK GRID (soft blue wash) -->
+    <!-- WORK GRID -->
     <section class="zone zone--offer">
       <div class="container">
         <div class="section section--tight">
-          <div class="grid grid--2">
-            <div>
-              <h2>Examples</h2>
-              <p>
-                Keep each one tight. This page should feel like proof, not a portfolio dump.
-              </p>
-            </div>
-
-            <div class="panel panel--tint">
-              <div class="panel__inner">
-                <div class="kicker">What clients care about</div>
-                <ul class="bullets">
-                  <li><span class="dot"></span>Clear message</li>
-                  <li><span class="dot"></span>Less friction</li>
-                  <li><span class="dot"></span>Consistent output</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
           <div class="workGrid">
             <article class="workCard">
               <div class="workCard__inner">
                 <div class="kicker">Brand system</div>
-                <h3 class="workCard__title">WLD.R — Core Brand System</h3>
+                <h3 class="workCard__title">Core Brand System</h3>
                 <p class="workCard__text">
                   Messaging pillars, positioning, and a repeatable layout system designed for speed and consistency.
                 </p>
@@ -148,40 +126,25 @@
                 </ul>
               </div>
             </article>
-          </div>
+          </div><!-- /workGrid -->
         </div><!-- /section -->
       </div><!-- /container -->
     </section>
 
-    <!-- ZONE 3: CTA (soft neutral wash) -->
+    <!-- CTA STRIP (informational, no buttons) -->
     <section class="zone zone--contact">
       <div class="container">
         <div class="section section--tight">
-          <div class="grid grid--2">
-            <div>
-              <h2>Want this kind of clarity + execution?</h2>
-              <p>
-                If your marketing feels unfinished, we’ll diagnose what’s not working and fix the highest-impact issues.
+          <div class="panel panel--tint">
+            <div class="panel__inner">
+              <div class="kicker">Note</div>
+              <p style="margin:0;">
+                This page stays tight on purpose. If you want deeper examples, tell me what you’re building and I’ll share relevant work.
               </p>
-              <div class="contact__actions">
-                <a class="btn btn--primary" href="contact.html">Start a conversation</a>
-                <a class="btn" href="index.html#offer">See the 30-day fix</a>
-              </div>
-            </div>
-
-            <div class="panel panel--tint">
-              <div class="panel__inner">
-                <div class="kicker">Good fit if…</div>
-                <ul class="bullets">
-                  <li><span class="dot"></span>Things feel stuck or scattered</li>
-                  <li><span class="dot"></span>You want systems, not noise</li>
-                  <li><span class="dot"></span>You want it to ship</li>
-                </ul>
-              </div>
             </div>
           </div>
-        </div><!-- /section -->
-      </div><!-- /container -->
+        </div>
+      </div>
     </section>
   </main>
 
