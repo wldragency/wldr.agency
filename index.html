@@ -13,12 +13,8 @@
   <header class="siteHeader">
     <div class="container">
       <div class="nav">
-        <a class="brand" href="index.html">
-          <img
-            class="brand__logo"
-            src="assets/WLDR-Logo.png"
-            alt="WLD.R logo"
-          />
+        <a class="brand" href="index.html" aria-label="WLD.R home">
+          <img class="brand__logo" src="assets/WLDR-Logo.png" alt="WLD.R logo" />
         </a>
 
         <div class="nav__links">
@@ -35,112 +31,115 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero">
+    <!-- ZONE 1: HERO (white base) -->
+    <section class="zone zone--hero">
       <div class="container">
-        <div class="hero__wrap">
-          <div>
-            <div class="kicker">Engineering discipline × creative execution</div>
+        <div class="hero">
+          <div class="hero__wrap">
+            <div>
+              <div class="kicker">Engineering discipline × creative execution</div>
 
-            <h1>
-              Marketing that actually gets <span class="accent">fixed</span>.
-            </h1>
+              <h1 class="hero__title">
+                Marketing that actually gets <span class="accent">fixed</span>.
+              </h1>
 
-            <p>
-              WLD.R helps founder-led businesses fix broken marketing systems and
-              leave them running better than before.
-            </p>
-
-            <div class="hero__meta">
-              <div class="chip">Clarity</div>
-              <div class="chip">Completion</div>
-              <div class="chip">Consistency</div>
-              <div class="chip">Feedback loops</div>
-            </div>
-
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="#contact">Start a conversation</a>
-              <a class="btn" href="#offer">See the 30-day fix</a>
-            </div>
-          </div>
-
-          <div class="panel panel--tint">
-            <div class="panel__inner">
-              <div class="kicker">What we do</div>
-              <h2>Execution between strategy and reality.</h2>
-
-              <p>
-                When marketing feels stuck, scattered, or half-finished, we
-                diagnose what’s not working, fix the highest-impact issues, and
-                build systems your team can actually run.
+              <p class="lead">
+                WLD.R helps founder-led businesses fix broken marketing systems and leave them running better than before.
               </p>
 
-              <ul class="bullets">
-                <li><span class="dot"></span>Positioning & messaging clarity</li>
-                <li><span class="dot"></span>Website & funnel fixes</li>
-                <li><span class="dot"></span>Campaigns that ship</li>
-                <li><span class="dot"></span>Content systems</li>
-                <li><span class="dot"></span>Measurement & iteration</li>
-              </ul>
+              <div class="hero__meta">
+                <div class="chip">Clarity</div>
+                <div class="chip">Completion</div>
+                <div class="chip">Consistency</div>
+                <div class="chip">Feedback loops</div>
+              </div>
+
+              <div class="hero__actions">
+                <a class="btn btn--primary" href="#contact">Start a conversation</a>
+                <a class="btn" href="#offer">See the 30-day fix</a>
+              </div>
+            </div>
+
+            <div class="panel panel--tint">
+              <div class="panel__inner">
+                <div class="kicker">What we do</div>
+                <h2>Execution between strategy and reality.</h2>
+
+                <p>
+                  When marketing feels stuck, scattered, or half-finished, we diagnose what’s not working,
+                  fix the highest-impact issues, and build systems your team can actually run.
+                </p>
+
+                <ul class="bullets">
+                  <li><span class="dot"></span>Positioning & messaging clarity</li>
+                  <li><span class="dot"></span>Website & funnel fixes</li>
+                  <li><span class="dot"></span>Campaigns that ship</li>
+                  <li><span class="dot"></span>Content systems</li>
+                  <li><span class="dot"></span>Measurement & iteration</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div><!-- /hero -->
+      </div><!-- /container -->
     </section>
 
-    <hr class="sep" />
+    <!-- ZONE 2: OFFER (soft blue wash) -->
+    <section id="offer" class="zone zone--offer">
+      <div class="container">
+        <div class="section section--tight">
+          <div class="grid grid--2">
+            <div>
+              <h2>The 30-Day Marketing Fix</h2>
+              <p>
+                A focused engagement to fix what’s broken and leave your marketing in a better place than we found it.
+                No retainers. No noise.
+              </p>
+            </div>
 
-    <!-- OFFER -->
-    <section id="offer" class="section section--tight">
-      <div class="container grid grid--2">
-        <div>
-          <h2>The 30-Day Marketing Fix</h2>
-          <p>
-            A focused engagement to fix what’s broken and leave your marketing
-            in a better place than we found it. No retainers. No noise.
-          </p>
-        </div>
-
-        <div class="panel panel--tint">
-          <div class="panel__inner">
-            <ul class="bullets">
-              <li><span class="dot"></span><strong>Week 1:</strong> Diagnose</li>
-              <li><span class="dot"></span><strong>Weeks 2–3:</strong> Fix & build</li>
-              <li><span class="dot"></span><strong>Week 4:</strong> Stabilize & hand-off</li>
-            </ul>
+            <div class="panel panel--tint">
+              <div class="panel__inner">
+                <ul class="bullets">
+                  <li><span class="dot"></span><strong>Week 1:</strong> Diagnose</li>
+                  <li><span class="dot"></span><strong>Weeks 2–3:</strong> Fix & build</li>
+                  <li><span class="dot"></span><strong>Week 4:</strong> Stabilize & hand-off</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </div><!-- /section -->
+      </div><!-- /container -->
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section section--tight">
-      <div class="container grid grid--2">
-        <div>
-          <h2>Let’s see what’s not working.</h2>
-          <p>
-            If something feels off, messy, or unfinished — start a conversation.
-            No pitch. No pressure.
-          </p>
+    <!-- ZONE 3: CONTACT (soft neutral wash) -->
+    <section id="contact" class="zone zone--contact">
+      <div class="container">
+        <div class="section section--tight">
+          <div class="grid grid--2">
+            <div>
+              <h2>Let’s see what’s not working.</h2>
+              <p>
+                If something feels off, messy, or unfinished — start a conversation. No pitch. No pressure.
+              </p>
 
-          <div class="contact__actions">
-            <a class="btn btn--primary" href="mailto:you@yourdomain.com">
-              Email WLD.R
-            </a>
-            <a class="btn" href="work.html">View work</a>
-          </div>
-        </div>
+              <div class="contact__actions">
+                <a class="btn btn--primary" href="mailto:you@yourdomain.com?subject=WLD.R%20Inquiry">Email WLD.R</a>
+                <a class="btn" href="work.html">View work</a>
+              </div>
+            </div>
 
-        <div class="panel panel--tint">
-          <div class="panel__inner">
-            <ul class="bullets">
-              <li><span class="dot"></span>What you do</li>
-              <li><span class="dot"></span>What feels broken</li>
-              <li><span class="dot"></span>Any relevant links</li>
-            </ul>
+            <div class="panel panel--tint">
+              <div class="panel__inner">
+                <ul class="bullets">
+                  <li><span class="dot"></span>What you do</li>
+                  <li><span class="dot"></span>What feels broken</li>
+                  <li><span class="dot"></span>Any relevant links</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </div><!-- /section -->
+      </div><!-- /container -->
     </section>
   </main>
 
