@@ -287,3 +287,55 @@ p {
   .zone { padding: 36px 0; }
   .zone--offer, .zone--contact { padding: 28px 0; }
 }
+/* ---------- Work grid (simple, tight) ---------- */
+.workGrid{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.workCard{
+  border-radius: var(--radius);
+  border: 1px solid rgba(11,18,32,.08);
+  background: #ffffff;
+}
+
+.workCard__inner{ padding: 16px; }
+
+.workCard__title{
+  margin: 8px 0 8px;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+.workCard__text{ margin: 0 0 10px; }
+
+.workCard__tags{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.workCard__tags li{
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(11,18,32,.10);
+  background: rgba(11,18,32,.02);
+  color: rgba(11,18,32,.68);
+}
+
+.miniNote{
+  margin-top: 12px;
+  font-size: 13px;
+  color: rgba(11,18,32,.55);
+}
+
+@media (max-width: 900px){
+  .workGrid{ grid-template-columns: 1fr; }
+}
