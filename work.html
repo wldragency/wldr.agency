@@ -5,252 +5,199 @@
   <title>Work — WLD.R</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Selected work from WLD.R — systems that ship: brand clarity, campaigns, and repeatable content." />
-  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
-  <!-- NAV -->
+  <!-- HEADER / NAV -->
   <header class="siteHeader">
-    <nav class="nav">
-      <div class="container nav__inner">
-        <a class="nav__logo" href="/" aria-label="WLD.R Home">WLD.R</a>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html" aria-label="WLD.R home">
+          <img class="brand__logo" src="assets/WLDR-Logo.png" alt="WLD.R logo" />
+        </a>
 
         <div class="nav__links">
-          <a class="nav__link" href="/work.html" aria-current="page">Work</a>
-          <a class="nav__pill" href="/contact.html">Start a Project</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav__cta">
+          <a class="btn" href="work.html">View work</a>
+          <a class="btn btn--primary" href="contact.html">Start a conversation</a>
         </div>
       </div>
-    </nav>
+    </div>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="pageHero pageHero--work">
-      <div class="pageHero__bg" aria-hidden="true">
-        <div class="bgGrid"></div>
-        <div class="bgGlow"></div>
+    <!-- ZONE 1: WORK HERO -->
+    <section class="zone zone--hero">
+      <div class="container">
+        <div class="hero">
+          <div class="hero__wrap">
+            <div>
+              <div class="kicker">Selected work</div>
+              <h1 class="hero__title">Proof that it ships.</h1>
+              <p class="lead">
+                A few examples of the kinds of fixes and systems WLD.R builds. If you want the same clarity + execution,
+                let’s talk.
+              </p>
 
-        <svg class="flow flow--band" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
-          <path class="flow__path" d="M-40,160 C220,40 420,240 620,120 C760,40 960,200 1240,80" />
-          <circle class="flow__node" cx="220" cy="100" r="6"/>
-          <circle class="flow__node" cx="620" cy="120" r="7"/>
-          <circle class="flow__node" cx="960" cy="200" r="6"/>
-        </svg>
-      </div>
+              <div class="hero__actions">
+                <a class="btn btn--primary" href="contact.html">Start a conversation</a>
+                <a class="btn" href="index.html#offer">See the 30-day fix</a>
+              </div>
+            </div>
 
-      <div class="container pageHero__content">
-        <p class="kicker"><span class="dot"></span> SELECTED WORK // SYSTEMS THAT SHIP</p>
-        <h1 class="pageHero__title">Work</h1>
-        <p class="pageHero__lead">
-          A few examples of how WLD.R turns strategy into execution—brand clarity, campaigns, and content systems built to drive traction.
-        </p>
-
-        <!-- FILTER CHIPS -->
-        <div class="chipRow" role="tablist" aria-label="Filter work">
-          <button class="chip is-active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="chip" type="button" data-filter="brand" role="tab" aria-selected="false">Brand</button>
-          <button class="chip" type="button" data-filter="campaign" role="tab" aria-selected="false">Campaign</button>
-          <button class="chip" type="button" data-filter="content" role="tab" aria-selected="false">Content</button>
-        </div>
-      </div>
+            <div class="panel panel--tint">
+              <div class="panel__inner">
+                <div class="kicker">What to expect</div>
+                <ul class="bullets">
+                  <li><span class="dot"></span>Clear messaging & positioning</li>
+                  <li><span class="dot"></span>Web pages that convert (less friction)</li>
+                  <li><span class="dot"></span>Campaigns & launches that ship</li>
+                  <li><span class="dot"></span>Content systems built for consistency</li>
+                  <li><span class="dot"></span>Simple measurement & iteration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div><!-- /hero -->
+      </div><!-- /container -->
     </section>
 
-    <!-- GRID -->
-    <section class="section section--tight">
+    <!-- ZONE 2: PROJECTS (soft blue wash) -->
+    <section class="zone zone--offer">
       <div class="container">
-
-        <div class="workGrid" id="workGrid">
-          <!-- BRAND -->
-          <article class="workCard" data-type="brand">
-            <span class="workCard__pill">Brand System</span>
-            <div class="workCard__title">WLD.R — Core Brand System</div>
-            <div class="workCard__desc">
-              Messaging pillars, positioning, visual direction, and a repeatable layout system designed for speed.
+        <div class="section section--tight">
+          <div class="grid grid--2">
+            <div>
+              <h2>Projects</h2>
+              <p>
+                Replace the placeholders below with your real work. Keep it tight: what it was, what was broken,
+                what you fixed, what changed.
+              </p>
             </div>
 
-            <div class="workCard__meta">
-              <div class="metaItem">
-                <span>Outcome</span>
-                Faster decisions + consistent output
-              </div>
-              <div class="metaItem">
-                <span>Deliverables</span>
-                Voice, rules, templates
-              </div>
-            </div>
-
-            <div class="workCard__actions">
-              <a class="btn btn--primary" href="/contact.html">Build Yours</a>
-              <button class="btn btn--ghost js-openModal" type="button"
-                data-kicker="Brand System"
-                data-title="WLD.R — Core Brand System"
-                data-copy="We built a system that makes brand decisions faster: positioning, voice rules, layout rules, and templates that keep output consistent without constant oversight.">
-                Details
-              </button>
-            </div>
-          </article>
-
-          <!-- CAMPAIGN -->
-          <article class="workCard" data-type="campaign">
-            <span class="workCard__pill">Campaign</span>
-            <div class="workCard__title">Launch Asset Pack</div>
-            <div class="workCard__desc">
-              Concept → creative direction → a cohesive launch pack that works across channels (not random one-offs).
-            </div>
-
-            <div class="workCard__meta">
-              <div class="metaItem">
-                <span>Outcome</span>
-                Cleaner launch + stronger conversion
-              </div>
-              <div class="metaItem">
-                <span>Deliverables</span>
-                Ads, social, landing guidance
+            <div class="panel panel--tint">
+              <div class="panel__inner">
+                <div class="kicker">Format that works</div>
+                <ul class="bullets">
+                  <li><span class="dot"></span><strong>Problem:</strong> what wasn’t working</li>
+                  <li><span class="dot"></span><strong>Fix:</strong> what you changed</li>
+                  <li><span class="dot"></span><strong>Outcome:</strong> what improved</li>
+                </ul>
               </div>
             </div>
+          </div>
 
-            <div class="workCard__actions">
-              <a class="btn btn--primary" href="/contact.html">Start a Launch</a>
-              <button class="btn btn--ghost js-openModal" type="button"
-                data-kicker="Campaign"
-                data-title="Launch Asset Pack"
-                data-copy="Campaign concept + creative direction + launch assets designed to work together. Built to ship fast and deploy clean across channels.">
-                Details
-              </button>
-            </div>
-          </article>
-
-          <!-- CONTENT -->
-          <article class="workCard" data-type="content">
-            <span class="workCard__pill">Content System</span>
-            <div class="workCard__title">Template + Playbook System</div>
-            <div class="workCard__desc">
-              Repeatable content templates, formats, and rules that make consistency easy (without burnout).
-            </div>
-
-            <div class="workCard__meta">
-              <div class="metaItem">
-                <span>Outcome</span>
-                Sustainable output + higher signal
+          <!-- WORK GRID -->
+          <div class="workGrid">
+            <!-- Card 1 -->
+            <article class="workCard">
+              <div class="workCard__inner">
+                <div class="kicker">Case study</div>
+                <h3 class="workCard__title">Columbus Tint Design — Lead flow & clarity</h3>
+                <p class="workCard__text">
+                  Simplified the offer, tightened the booking flow, and built repeatable content structure so the team can stay consistent.
+                </p>
+                <ul class="workCard__tags">
+                  <li>Messaging</li><li>Website</li><li>Content system</li>
+                </ul>
               </div>
-              <div class="metaItem">
-                <span>Deliverables</span>
-                Templates, pillars, posting system
+            </article>
+
+            <!-- Card 2 -->
+            <article class="workCard">
+              <div class="workCard__inner">
+                <div class="kicker">Case study</div>
+                <h3 class="workCard__title">Wilder Drift — Brand + sponsor proof</h3>
+                <p class="workCard__text">
+                  Built a brand presence that communicates capability: clean visuals, clear positioning, and assets that support partnerships.
+                </p>
+                <ul class="workCard__tags">
+                  <li>Brand</li><li>Design</li><li>Partnership assets</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="workCard">
+              <div class="workCard__inner">
+                <div class="kicker">Case study</div>
+                <h3 class="workCard__title">SESSION — Product launch system</h3>
+                <p class="workCard__text">
+                  Positioned the product, clarified the value, and built the launch content system so early adoption can compound.
+                </p>
+                <ul class="workCard__tags">
+                  <li>Positioning</li><li>Launch</li><li>Content</li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Card 4 (optional) -->
+            <article class="workCard">
+              <div class="workCard__inner">
+                <div class="kicker">Example</div>
+                <h3 class="workCard__title">Your next project — Marketing system cleanup</h3>
+                <p class="workCard__text">
+                  If things feel scattered, unfinished, or inconsistent, this is exactly the gap WLD.R fills.
+                </p>
+                <ul class="workCard__tags">
+                  <li>Audit</li><li>Fix</li><li>Ship</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div><!-- /section -->
+      </div><!-- /container -->
+    </section>
+
+    <!-- ZONE 3: CTA (soft neutral wash) -->
+    <section class="zone zone--contact">
+      <div class="container">
+        <div class="section section--tight">
+          <div class="grid grid--2">
+            <div>
+              <h2>Want this kind of clarity + execution?</h2>
+              <p>
+                If your marketing feels messy or stuck, we’ll diagnose what’s not working and fix the highest-impact issues.
+              </p>
+              <div class="contact__actions">
+                <a class="btn btn--primary" href="contact.html">Start a conversation</a>
+                <a class="btn" href="index.html#offer">See the 30-day fix</a>
               </div>
             </div>
 
-            <div class="workCard__actions">
-              <a class="btn btn--primary" href="/contact.html">Build a System</a>
-              <button class="btn btn--ghost js-openModal" type="button"
-                data-kicker="Content System"
-                data-title="Template + Playbook System"
-                data-copy="A repeatable machine: content pillars, template library, formatting rules, and a system to keep quality high and production sustainable.">
-                Details
-              </button>
+            <div class="panel panel--tint">
+              <div class="panel__inner">
+                <div class="kicker">Quick filter</div>
+                <ul class="bullets">
+                  <li><span class="dot"></span>Founder-led / small team</li>
+                  <li><span class="dot"></span>Marketing feels unfinished</li>
+                  <li><span class="dot"></span>You want systems, not noise</li>
+                </ul>
+              </div>
             </div>
-          </article>
-        </div>
-
-      </div>
+          </div>
+        </div><!-- /section -->
+      </div><!-- /container -->
     </section>
   </main>
 
-  <!-- MODAL -->
-  <div class="modal" id="workModal" aria-hidden="true">
-    <div class="modal__overlay" data-close="true"></div>
-    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div class="modal__top">
-        <div>
-          <div class="modal__kicker" id="modalKicker">Work</div>
-          <div class="modal__title" id="modalTitle">Details</div>
-        </div>
-        <button class="modal__close" type="button" aria-label="Close" data-close="true">×</button>
-      </div>
-
-      <p class="modal__copy" id="modalCopy"></p>
-
-      <div class="modal__actions">
-        <a class="btn btn--primary" href="/contact.html">Start a Project</a>
-        <button class="btn btn--ghost" type="button" data-close="true">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
-      <div class="footer__left">© <span id="year"></span> WLD.R</div>
-      <div class="footer__right">
-        <a href="mailto:support@wldr.agency">support@wldr.agency</a>
+      <div>© <span id="year"></span> WLD.R — Where legacy drives results</div>
+      <div class="footer__links">
+        <a href="work.html">Work</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Filter chips
-    const chips = document.querySelectorAll('.chip[data-filter]');
-    const cards = document.querySelectorAll('.workCard[data-type]');
-
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        const filter = chip.dataset.filter;
-
-        chips.forEach(c => {
-          c.classList.remove('is-active');
-          c.setAttribute('aria-selected', 'false');
-        });
-        chip.classList.add('is-active');
-        chip.setAttribute('aria-selected', 'true');
-
-        cards.forEach(card => {
-          const type = card.dataset.type;
-          const show = (filter === 'all' || type === filter);
-          card.style.display = show ? '' : 'none';
-        });
-      });
-    });
-
-    // Modal
-    const modal = document.getElementById('workModal');
-    const modalKicker = document.getElementById('modalKicker');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalCopy = document.getElementById('modalCopy');
-
-    function openModal({ kicker, title, copy }){
-      modalKicker.textContent = kicker || 'Work';
-      modalTitle.textContent = title || 'Details';
-      modalCopy.textContent = copy || '';
-      modal.classList.add('is-open');
-      document.body.classList.add('noScroll');
-      modal.setAttribute('aria-hidden', 'false');
-    }
-
-    function closeModal(){
-      modal.classList.remove('is-open');
-      document.body.classList.remove('noScroll');
-      modal.setAttribute('aria-hidden', 'true');
-    }
-
-    document.querySelectorAll('.js-openModal').forEach(btn => {
-      btn.addEventListener('click', () => {
-        openModal({
-          kicker: btn.dataset.kicker,
-          title: btn.dataset.title,
-          copy: btn.dataset.copy
-        });
-      });
-    });
-
-    modal.addEventListener('click', (e) => {
-      if (e.target && e.target.dataset && e.target.dataset.close === "true") closeModal();
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
-    });
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
