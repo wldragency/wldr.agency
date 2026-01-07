@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <title>Contact — WLD.R</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact WLD.R — start a conversation about what’s not working in your marketing." />
+  <meta name="description" content="Start a project with WLD.R — tell us what you’re building and what needs to ship." />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
-  <!-- HEADER / NAV -->
+  <!-- HEADER / NAV (same as index/work) -->
   <header class="siteHeader">
     <div class="container">
       <div class="nav">
@@ -24,40 +24,46 @@
 
         <div class="nav__cta">
           <a class="btn" href="work.html">View work</a>
-          <a class="btn btn--primary" href="#contact">Start a conversation</a>
+          <a class="btn btn--primary" href="#intake">Start a conversation</a>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ZONE 1: CONTACT HERO -->
+    <!-- ZONE 1: HERO -->
     <section class="zone zone--hero">
       <div class="container">
         <div class="hero">
           <div class="hero__wrap">
             <div>
-              <div class="kicker">Contact</div>
-              <h1 class="hero__title">Start a conversation.</h1>
+              <div class="kicker">Start a project</div>
+              <h1 class="hero__title">Tell me what needs to ship.</h1>
               <p class="lead">
-                If your marketing feels stuck, scattered, or unfinished, send a quick note.
-                No pitch. No pressure. Just clarity.
+                If your marketing feels stuck, scattered, or unfinished, send the details below.
+                This goes directly to <strong>support@wldr.agency</strong>.
               </p>
 
+              <div class="hero__meta">
+                <div class="chip">Clarity first</div>
+                <div class="chip">Surgical fixes</div>
+                <div class="chip">Systems that run</div>
+                <div class="chip">No noise</div>
+              </div>
+
               <div class="hero__actions">
-                <a class="btn btn--primary" href="mailto:you@yourdomain.com?subject=WLD.R%20Inquiry">Email WLD.R</a>
-                <a class="btn" href="work.html">View work</a>
+                <a class="btn btn--primary" href="#intake">Start a project</a>
+                <a class="btn" href="mailto:support@wldr.agency?subject=WLD.R%20Inquiry">Email instead</a>
               </div>
             </div>
 
             <div class="panel panel--tint">
               <div class="panel__inner">
-                <div class="kicker">Good to include</div>
+                <div class="kicker">What happens next</div>
                 <ul class="bullets">
-                  <li><span class="dot"></span>What the business is + what you sell</li>
-                  <li><span class="dot"></span>What feels broken right now</li>
-                  <li><span class="dot"></span>Any links (site / socials)</li>
-                  <li><span class="dot"></span>What “working” would look like</li>
+                  <li><span class="dot"></span><strong>01</strong> Quick reply + a few clarifying questions</li>
+                  <li><span class="dot"></span><strong>02</strong> We map the system (not just deliverables)</li>
+                  <li><span class="dot"></span><strong>03</strong> We execute and ship what works</li>
                 </ul>
               </div>
             </div>
@@ -66,35 +72,97 @@
       </div><!-- /container -->
     </section>
 
-    <!-- ZONE 2: CONTACT OPTIONS (soft blue wash) -->
-    <section id="contact" class="zone zone--offer">
+    <!-- ZONE 2: INTAKE (soft blue wash) -->
+    <section id="intake" class="zone zone--offer">
       <div class="container">
         <div class="section section--tight">
           <div class="grid grid--2">
             <div>
-              <h2>Best way to reach me</h2>
+              <h2>Project intake</h2>
               <p>
-                Email is fastest. If you send a few bullets, I’ll reply with the next step and whether the 30-day fix is a good fit.
+                Keep it simple. A few bullets is enough. If we’re a fit, we’ll propose a tight scope and a clear start date.
               </p>
 
-              <div class="contact__actions">
-                <a class="btn btn--primary" href="mailto:you@yourdomain.com?subject=WLD.R%20Inquiry">Email WLD.R</a>
-                <a class="btn" href="index.html#offer">See the 30-day fix</a>
+              <div class="miniNote">
+                Prefer email? Send goals + timeline to <strong>support@wldr.agency</strong>.
               </div>
 
-              <div class="miniNote">
-                Tip: Keep it short. Two paragraphs or bullets is perfect.
+              <div class="contact__actions">
+                <a class="btn" href="mailto:support@wldr.agency?subject=WLD.R%20Inquiry">Email instead</a>
+                <a class="btn" href="work.html">View work</a>
               </div>
             </div>
 
-            <div class="panel panel--tint">
+            <!-- FORM PANEL -->
+            <div class="panel">
               <div class="panel__inner">
-                <div class="kicker">Response expectations</div>
-                <ul class="bullets">
-                  <li><span class="dot"></span>Quick read + clarification questions</li>
-                  <li><span class="dot"></span>Proposed scope (tight, practical)</li>
-                  <li><span class="dot"></span>Clear start date + deliverables</li>
-                </ul>
+                <!--
+                  IMPORTANT:
+                  Paste your EXISTING working form markup right here (the <form>...</form> block).
+                  If your current contact page already submits correctly, copy that exact form block into this spot.
+                -->
+
+                <!-- START: Replace this placeholder form with your real one -->
+                <form class="form" action="mailto:support@wldr.agency" method="post" enctype="text/plain">
+                  <div class="form__row">
+                    <label class="form__label" for="name">Name</label>
+                    <input class="form__input" id="name" name="name" placeholder="Your name" required />
+                  </div>
+
+                  <div class="form__row">
+                    <label class="form__label" for="email">Email</label>
+                    <input class="form__input" id="email" name="email" type="email" placeholder="you@company.com" required />
+                  </div>
+
+                  <div class="form__row">
+                    <label class="form__label" for="company">Company / Brand</label>
+                    <input class="form__input" id="company" name="company" placeholder="Brand name" />
+                  </div>
+
+                  <div class="form__row">
+                    <label class="form__label" for="budget">Budget range</label>
+                    <select class="form__select" id="budget" name="budget">
+                      <option value="">Choose one</option>
+                      <option>$1k–$3k</option>
+                      <option>$3k–$7k</option>
+                      <option>$7k–$15k</option>
+                      <option>$15k+</option>
+                    </select>
+                  </div>
+
+                  <div class="form__row">
+                    <label class="form__label" for="need">What do you need right now?</label>
+                    <select class="form__select" id="need" name="need">
+                      <option value="">Choose one</option>
+                      <option>Fix messaging / positioning</option>
+                      <option>Fix website / funnel</option>
+                      <option>Launch / campaign assets</option>
+                      <option>Build a content system</option>
+                      <option>Not sure (diagnose it)</option>
+                    </select>
+                  </div>
+
+                  <div class="form__row">
+                    <label class="form__label" for="details">Project details</label>
+                    <textarea class="form__textarea" id="details" name="details" rows="6"
+                      placeholder="What are you launching? What’s the goal? What’s not working right now? What does success look like?"></textarea>
+                  </div>
+
+                  <div class="form__row">
+                    <label class="form__label" for="timeline">Timeline</label>
+                    <input class="form__input" id="timeline" name="timeline" placeholder="Example: ASAP / 2 weeks / this month" />
+                  </div>
+
+                  <div class="form__actions">
+                    <button class="btn btn--primary" type="submit">Send</button>
+                    <a class="btn" href="mailto:support@wldr.agency?subject=WLD.R%20Inquiry">Email instead</a>
+                  </div>
+
+                  <p class="form__fineprint">
+                    By submitting, you agree WLD.R can contact you about this inquiry. No spam. No nonsense.
+                  </p>
+                </form>
+                <!-- END placeholder -->
               </div>
             </div>
           </div>
@@ -113,8 +181,8 @@
                 Totally normal. If you can describe what feels off, we can diagnose the rest.
               </p>
               <div class="contact__actions">
-                <a class="btn btn--primary" href="mailto:you@yourdomain.com?subject=WLD.R%20Inquiry">Email WLD.R</a>
-                <a class="btn" href="work.html">View work</a>
+                <a class="btn btn--primary" href="mailto:support@wldr.agency?subject=WLD.R%20Inquiry">Email WLD.R</a>
+                <a class="btn" href="index.html#offer">See the 30-day fix</a>
               </div>
             </div>
 
