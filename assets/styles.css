@@ -1,219 +1,314 @@
-<header class="siteHeader">
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="/">
-        <img class="brand__logo" src="/assets/img/wldr-logo.png" alt="WLD.R logo" />
-      </a>
+/* =========================
+   WLD.R — Tight Surgical (Light)
+   White base + controlled blue accents
+   ========================= */
 
-      <div class="nav__links">
-        <a href="/work.html">Work</a>
-        <a href="/about.html">About</a>
-        <a href="#offer">Offer</a>
-        <a href="#contact">Contact</a>
-      </div>
+:root{
+  --bg: #ffffff;
+  --ink: #0b1220;
+  --muted: rgba(11,18,32,.72);
+  --faint: rgba(11,18,32,.52);
 
-      <div class="nav__cta">
-        <a class="btn" href="/work.html">View work</a>
-        <a class="btn btn--primary" href="#contact">Start a conversation</a>
-      </div>
-    </div>
-  </div>
-</header>
+  --line: rgba(11,18,32,.10);
+  --line2: rgba(11,18,32,.14);
 
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero__wrap">
-        <div>
-          <div class="kicker">Engineering discipline × creative execution</div>
-          <h1 class="hero__title">
-            Marketing that actually gets <span class="accent">fixed</span>.
-          </h1>
-          <p>
-            WLD.R helps founder-led businesses fix broken marketing systems and leave them
-            running better than before.
-          </p>
+  --accent: #0a84ff;      /* WLD.R blue */
+  --accentSoft: rgba(10,132,255,.10);
 
-          <div class="hero__meta">
-            <div class="chip">Clarity</div>
-            <div class="chip">Completion</div>
-            <div class="chip">Consistency</div>
-            <div class="chip">Feedback loops</div>
-          </div>
+  --panel: #f6f8fb;       /* soft “lab” gray */
+  --panel2: #eef3ff;      /* subtle blue tint */
 
-          <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-            <a class="btn btn--primary" href="#contact">Start a conversation</a>
-            <a class="btn" href="#offer">See the 30-day fix</a>
-          </div>
-        </div>
+  --radius: 18px;
+  --radiusSm: 14px;
 
-        <div class="panel">
-          <div class="panel__inner">
-            <div class="kicker">What we do</div>
-            <h2>Execution between strategy and reality.</h2>
-            <p>
-              When marketing feels stuck, scattered, or half-finished, we diagnose what’s
-              not working, fix the highest-impact issues, and build a system your team can run.
-            </p>
+  --shadow2: 0 10px 22px rgba(0,0,0,.06);
 
-            <ul class="bullets">
-              <li><span class="dot"></span><span>Positioning & messaging clarity</span></li>
-              <li><span class="dot"></span><span>Website / funnel friction fixes</span></li>
-              <li><span class="dot"></span><span>Campaigns & launches that actually ship</span></li>
-              <li><span class="dot"></span><span>Content systems built for consistency</span></li>
-              <li><span class="dot"></span><span>Simple measurement + iteration loops</span></li>
-            </ul>
-          </div>
-        </div>
+  --container: 1100px;
 
-      </div>
-    </div>
-  </section>
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
-  <hr class="sep" />
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.45;
+}
 
-  <!-- PROBLEM -->
-  <section class="section section--tight">
-    <div class="container grid grid--2">
-      <div>
-        <h2>Most marketing isn’t broken — it’s unfinished.</h2>
-        <p>
-          Businesses don’t struggle because they lack ideas or tools. They struggle because
-          nothing is connected, nothing is finished, and nothing compounds.
-        </p>
-        <p>
-          Campaigns stall. Messaging drifts. Content exists, but it doesn’t convert. Internal teams
-          are busy, but momentum is missing. WLD.R steps into that gap: we clean up the chaos, fix what
-          matters most, and leave behind systems that actually run.
-        </p>
-      </div>
+a{ color: inherit; text-decoration:none; }
+a:hover{ opacity:.9; }
 
-      <div class="panel">
-        <div class="panel__inner">
-          <div class="kicker">The outcome</div>
-          <h3 style="margin-top:8px;">Momentum, not noise.</h3>
-          <p style="margin-top:8px;">
-            The deliverable isn’t “more marketing.” It’s a working system: clear messaging, clean execution,
-            consistent output, and feedback that improves results.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+.container{
+  width: min(var(--container), calc(100% - 40px));
+  margin: 0 auto;
+}
 
-  <!-- OFFER -->
-  <section id="offer" class="section">
-    <div class="container">
-      <div class="grid grid--2">
-        <div>
-          <div class="kicker">Core engagement</div>
-          <h2>The 30-Day Marketing Fix</h2>
-          <p>
-            A focused engagement to fix what’s broken and leave your marketing in a better place than we found it.
-            No long retainers. No trend chasing. Just surgical execution with a clear start and finish.
-          </p>
+/* ----- Header/Nav ----- */
+.siteHeader{
+  position: sticky;
+  top:0;
+  z-index: 50;
+  background: rgba(255,255,255,.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
 
-          <div class="card">
-            <div class="panel__inner">
-              <div class="kicker">What happens</div>
-              <ul class="bullets">
-                <li><span class="dot"></span><span><strong>Week 1:</strong> Audit & diagnose</span></li>
-                <li><span class="dot"></span><span><strong>Weeks 2–3:</strong> Fix & build</span></li>
-                <li><span class="dot"></span><span><strong>Week 4:</strong> Stabilize & hand off</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 12px 0;
+  gap: 16px;
+}
 
-        <div class="panel">
-          <div class="panel__inner">
-            <div class="kicker">Good fit if…</div>
-            <ul class="bullets">
-              <li><span class="dot"></span><span>You feel stuck, scattered, or inconsistent</span></li>
-              <li><span class="dot"></span><span>Your team is busy but momentum is missing</span></li>
-              <li><span class="dot"></span><span>You want clarity + execution, not more ideas</span></li>
-              <li><span class="dot"></span><span>You want systems that keep running after we’re done</span></li>
-            </ul>
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  min-height: 40px;
+}
 
-            <hr class="sep" />
+.brand__logo{
+  height: 30px;
+  width:auto;
+  display:block;
+}
 
-            <div class="kicker">Not a fit if…</div>
-            <ul class="bullets">
-              <li><span class="dot"></span><span>You want daily posting / trend chasing</span></li>
-              <li><span class="dot"></span><span>You want endless revisions without decisions</span></li>
-              <li><span class="dot"></span><span>You want “someone to manage social” only</span></li>
-            </ul>
-          </div>
-        </div>
+.nav__links{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  color: var(--muted);
+  font-size: 14px;
+}
 
-      </div>
-    </div>
-  </section>
+.nav__links a{
+  padding: 8px 10px;
+  border-radius: 999px;
+}
 
-  <!-- WHY -->
-  <section class="section section--tight">
-    <div class="container panel">
-      <div class="panel__inner">
-        <div class="kicker">Why WLD.R</div>
-        <h2 style="margin-top:10px;">Built to ship under real constraints.</h2>
-        <p>
-          WLD.R isn’t a traditional agency. It’s built by someone who’s spent years shipping real things —
-          products, programs, events, and systems — under real constraints. We don’t overpromise. We don’t add
-          unnecessary complexity. We focus on what actually moves the needle.
-        </p>
-        <p>
-          You don’t need more ideas. You need things to work. That’s what WLD.R is here for.
-        </p>
-      </div>
-    </div>
-  </section>
+.nav__links a:hover{
+  background: rgba(0,0,0,.04);
+  color: var(--ink);
+}
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container grid grid--2">
-      <div>
-        <h2>Let’s see what’s not working.</h2>
-        <p>
-          If your marketing feels off — stuck, messy, or unfinished — start a conversation.
-          No pressure. No pitch. Just clarity.
-        </p>
+.nav__cta{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+}
 
-        <!-- Replace with your existing form/handler -->
-        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn btn--primary" href="mailto:you@yourdomain.com?subject=WLD.R%20Inquiry">Email WLD.R</a>
-          <a class="btn" href="/work.html">View work</a>
-        </div>
-      </div>
+@media (max-width: 820px){
+  .nav__links{ display:none; }
+}
 
-      <div class="panel">
-        <div class="panel__inner">
-          <div class="kicker">What to send</div>
-          <ul class="bullets">
-            <li><span class="dot"></span><span>What’s the business + what you sell</span></li>
-            <li><span class="dot"></span><span>What feels broken right now</span></li>
-            <li><span class="dot"></span><span>Any links (site / socials)</span></li>
-            <li><span class="dot"></span><span>What “working” would look like</span></li>
-          </ul>
-        </div>
-      </div>
+/* ----- Buttons ----- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line2);
+  background: #fff;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .01em;
+  transition: transform .08s ease, background .12s ease, border-color .12s ease;
+}
 
-    </div>
-  </section>
-</main>
+.btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(11,18,32,.22);
+  background: rgba(0,0,0,.02);
+}
 
-<footer class="footer">
-  <div class="container">
-    <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
-      <div>© <span id="year"></span> WLD.R — Where legacy drives results</div>
-      <div style="display:flex; gap:14px;">
-        <a href="/work.html">Work</a>
-        <a href="/about.html">About</a>
-      </div>
-    </div>
-  </div>
-</footer>
+.btn--primary{
+  border-color: rgba(10,132,255,.45);
+  background: linear-gradient(180deg, rgba(10,132,255,.16), rgba(10,132,255,.08));
+}
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+.btn--primary:hover{
+  border-color: rgba(10,132,255,.70);
+  background: linear-gradient(180deg, rgba(10,132,255,.20), rgba(10,132,255,.10));
+}
+
+/* ----- Type ----- */
+.kicker{
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+h1,h2,h3{ margin:0 0 10px 0; letter-spacing: -0.02em; }
+h1{ font-size: clamp(34px, 4.2vw, 50px); line-height: 1.03; }
+h2{ font-size: clamp(20px, 2.6vw, 28px); line-height: 1.12; }
+h3{ font-size: 18px; line-height: 1.2; }
+
+p{
+  margin: 0 0 12px 0;
+  color: var(--muted);
+  font-size: 15.5px;
+}
+
+/* ----- Layout ----- */
+.section{
+  padding: 44px 0;  /* short scroll */
+}
+.section--tight{
+  padding: 28px 0;
+}
+
+.grid{
+  display:grid;
+  gap: 16px;
+}
+
+.grid--2{
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+@media (max-width: 900px){
+  .grid--2{ grid-template-columns: 1fr; }
+}
+
+/* ----- Panels/Cards ----- */
+.panel{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow2);
+}
+
+.panel--tint{
+  background: var(--panel2);
+  border-color: rgba(10,132,255,.22);
+}
+
+.panel__inner{
+  padding: 18px;
+}
+
+.card{
+  border: 1px solid var(--line);
+  border-radius: var(--radiusSm);
+  background: #fff;
+  box-shadow: var(--shadow2);
+}
+
+.card .panel__inner{ padding: 16px; }
+
+.sep{
+  border:0;
+  height:1px;
+  background: linear-gradient(90deg, transparent, var(--line2), transparent);
+  margin: 18px 0;
+}
+
+/* ----- Hero ----- */
+.hero{
+  padding: 46px 0 22px 0;
+}
+
+.hero__wrap{
+  display:grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 900px){
+  .hero__wrap{ grid-template-columns: 1fr; }
+}
+
+.hero__title .accent{
+  color: var(--accent);
+}
+
+.hero__meta{
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.hero__actions{
+  margin-top: 14px;
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.chip{
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(11,18,32,.70);
+  border: 1px solid rgba(11,18,32,.12);
+  background: rgba(255,255,255,.70);
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+/* ----- Bullets ----- */
+.bullets{
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style:none;
+}
+
+.bullets li{
+  display:flex;
+  gap: 10px;
+  padding: 9px 0;
+  border-top: 1px solid rgba(11,18,32,.10);
+  color: var(--muted);
+}
+
+.bullets li:first-child{ border-top:0; }
+
+.dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  margin-top: 5px;
+  flex: 0 0 auto;
+  box-shadow: 0 0 0 4px rgba(10,132,255,.12);
+}
+
+/* ----- Contact actions ----- */
+.contact__actions{
+  margin-top: 14px;
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ----- Footer ----- */
+.footer{
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+  color: rgba(11,18,32,.55);
+  font-size: 13px;
+}
+
+.footer__inner{
+  display:flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer__links{
+  display:flex;
+  gap: 14px;
+}
+
+.footer a{ color: rgba(11,18,32,.70); }
